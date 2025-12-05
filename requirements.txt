@@ -1,0 +1,7 @@
+ipykernel
+jupyter
+torch==2.8.0
+pillow==11.3.0
+pytorch-lightning==2.6.0
+matplotlib==3.9.4
+torchvision==0.23.0
