@@ -1,0 +1,91 @@
+# Baseline ResNet-18 Configuration
+# Hurricane Damage Detection Project
+
+# Data configuration
+data:
+  root_dir: "ipeo_hurricane_for_students"
+  image_size: 150
+  batch_size: 32
+  num_workers: 4
+  
+  # Computed from training set (run EDA first or compute manually)
+  # mean: [0.4353, 0.4570, 0.4156]  # RGB channels
+  # std: [0.2097, 0.1875, 0.1877]   # RGB channels
+  
+  # Data augmentation (training only)
+  augmentation:
+    horizontal_flip_prob: 0.5
+    vertical_flip_prob: 0.5
+    rotation_degrees: 20
+    color_jitter:
+      brightness: 0.2
+      contrast: 0.2
+      saturation: 0.2
+      hue: 0.1
+
+# Model configuration
+model:
+  architecture: "resnet18"  # resnet18, resnet50, efficientnet, etc.
+  pretrained: true
+  num_classes: 2
+  freeze_backbone: false    # Set to true for faster initial training
+
+# Training configuration
+training:
+  max_epochs: 20
+  early_stopping_patience: 10
+  
+  # Optimizer
+  optimizer:
+    type: "adam"           # adam, adamw, sgd
+    lr: 0.001
+    weight_decay: 0.0001
+    
+  # Learning rate scheduler
+  scheduler:
+    type: "cosine"         # cosine, step, plateau, null
+    # For cosine: automatically uses max_epochs
+    # For step: step_size and gamma needed
+    # For plateau: patience and factor needed
+    
+  # Loss configuration
+  loss:
+    use_class_weights: true  # Compute weights from class distribution
+    # focal_loss: false       # Use focal loss instead of CE
+    # label_smoothing: 0.0    # Label smoothing factor
+
+# Calibration configuration
+calibration:
+  method: "temperature_scaling"  # temperature_scaling, platt, isotonic
+  n_bins: 15                     # Number of bins for ECE computation
+
+# Evaluation configuration
+evaluation:
+  metrics:
+    - accuracy
+    - precision
+    - recall
+    - f1_score
+    - roc_auc
+    - ece
+    - mce
+    - brier_score
+    - nll
+  
+  generate_plots:
+    - reliability_diagram
+    - confusion_matrix
+    - confidence_histogram
+    - roc_curve
+
+# Output configuration
+output:
+  checkpoint_dir: "checkpoints/baseline_resnet18"
+  results_dir: "results"
+  log_dir: "logs"
+  experiment_name: "baseline_resnet18"
+  save_top_k: 3              # Save top 3 checkpoints
+
+# Reproducibility
+seed: 42
+deterministic: true
