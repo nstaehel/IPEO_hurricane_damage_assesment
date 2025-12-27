@@ -44,11 +44,17 @@ class GeoEye1(Dataset):
             if not os.path.isdir(class_dir):
                 continue
 
-            # Get all images from folder
-            for img_name in os.listdir(class_dir):
-                if img_name.lower().endswith((".jpeg", ".jpg", ".png")):
-                    img_path = os.path.join(class_dir, img_name)
-                    self.data.append((img_path, class_idx))
+            if split == 'train':
+            # Get all images from folder while avoiding duplicates in training set
+                for img_name in list(set(os.listdir(class_dir))):
+                    if img_name.lower().endswith((".jpeg", ".jpg", ".png")):
+                        img_path = os.path.join(class_dir, img_name)
+                        self.data.append((img_path, class_idx))
+            else:
+                for img_name in os.listdir(class_dir):
+                    if img_name.lower().endswith((".jpeg", ".jpg", ".png")):
+                        img_path = os.path.join(class_dir, img_name)
+                        self.data.append((img_path, class_idx))
 
         # Sort for reproducibility
         self.data.sort()

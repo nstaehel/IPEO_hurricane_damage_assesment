@@ -1,8 +1,4 @@
-from torch.utils.data import DataLoader
 import torchvision.transforms as T
-from torch.utils.data import Dataset
-import os
-import matplotlib.pyplot as plt
 import numpy as np
 
 import pytorch_lightning as pl
@@ -18,7 +14,8 @@ class LightningClassifierModelWrapper(pl.LightningModule):
     def __init__(self, model):
         super().__init__()
         self.model = model
-
+        self.save_hyperparameters(ignore="model")
+    
     def forward(self, x):
         return self.model(x)
 
@@ -26,6 +23,7 @@ class LightningClassifierModelWrapper(pl.LightningModule):
         x, y = batch
         y_hat = self(x)
         loss = F.cross_entropy(y_hat, y)
+
         self.log("train_loss", loss, prog_bar=True)
         return loss
 
@@ -37,9 +35,9 @@ class LightningClassifierModelWrapper(pl.LightningModule):
         f1 = pl.metrics.classification.F1(num_classes=2)
         f1_score = f1(y_hat.argmax(1), y)
 
-        self.log("val_loss", loss, prog_bar=True)
-        self.log("val_accuracy", acc, prog_bar=True)
-        self.log("val_f1", f1_score, prog_bar=True)
+        self.log("val_loss", loss, prog_bar=True, on_step=False, on_epoch=True)
+        self.log("val_accuracy", acc, prog_bar=True, on_step=False, on_epoch=True)
+        self.log("val_f1", f1_score, prog_bar=True, on_step=False, on_epoch=True)
 
     def predict_step(self, batch, batch_idx):
         x, y = batch
@@ -47,27 +45,34 @@ class LightningClassifierModelWrapper(pl.LightningModule):
         return y_hat, y
 
     def configure_optimizers(self):
-        # return torch.optim.Adam(self.parameters(), lr=0.01, momentum=0.9)
-        return torch.optim.SGD(self.parameters(), lr=0.01, momentum=0.9)
+        #optimizer = torch.optim.Adam(self.parameters(), lr=0.01, momentum=0.9)
+        optimizer = torch.optim.SGD(self.parameters(), lr=0.01, momentum=0.9)
+        return optimizer
     
-def modelling_choice(model_name = "resnet18"):
+def modelling_choice(model_name = "resnet18", max_epochs=5, pretrained=True):
     #set seed for reproducibility
     pl.seed_everything(42, workers=True)
     #model selection
     if model_name == "resnet18":
-        model = torchvision.models.resnet18(weights="IMAGENET1K_V1")
+        if pretrained:
+            model = torchvision.models.resnet18(weights="IMAGENET1K_V1")
+        else:
+            model = torchvision.models.resnet18(weights=None)
     elif model_name == "alexnet":
-        model = torchvision.models.alexnet(weights="IMAGENET1K_V1")
+        if pretrained:
+            model = torchvision.models.alexnet(weights="IMAGENET1K_V1")
+        else:           
+            model = torchvision.models.alexnet(weights=None)
     else:
-        raise ValueError(f"Model {model_name} not supported.")
+        raise ValueError(f"Model {model_name} not (yet) supported.")
     model.fc = torch.nn.Linear(model.fc.in_features, 2)
 
     lightning_model = LightningClassifierModelWrapper(model)
 
     trainer = pl.Trainer(
-        max_epochs=5,
+        max_epochs=max_epochs,
         accelerator="gpu" if torch.cuda.is_available() else "cpu",
-        logger=pl.loggers.TensorBoardLogger("logs/", name="hurricane"),
+        logger=pl_loggers.TensorBoardLogger("logs/", name="hurricane"),
         callbacks=[
             ModelCheckpoint(
                 dirpath="checkpoints",
@@ -80,3 +85,8 @@ def modelling_choice(model_name = "resnet18"):
     )
     return trainer, lightning_model
 
+def count_parameters(model):
+    """Count trainable and total parameters"""
+    trainable = sum(p.numel() for p in model.parameters() if p.requires_grad)
+    total = sum(p.numel() for p in model.parameters())
+    return trainable, total
