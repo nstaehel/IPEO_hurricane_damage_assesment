@@ -1,0 +1,16 @@
+#!/bin/bash -
+
+#SBATCH --account env540
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=32
+#SBATCH --partition=gpu
+#SBATCH --qos=normal
+#SBATCH --gres=gpu:1
+#SBATCH --time=00:04:00
+# Load modules
+module load gcc python
+# Activate virtual environment or conda environment
+source ~/.venv/bin/activate # Replace with your environment setup
+# Run your Python script
+python inference.py # Replace with your script name

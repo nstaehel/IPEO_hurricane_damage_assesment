@@ -4,18 +4,22 @@ import numpy as np
 import pytorch_lightning as pl
 from pytorch_lightning import loggers as pl_loggers
 from pytorch_lightning.callbacks import ModelCheckpoint
+import torchmetrics
 
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torchvision
+import pandas as pd
 
 class LightningClassifierModelWrapper(pl.LightningModule):
     def __init__(self, model):
         super().__init__()
         self.model = model
         self.save_hyperparameters(ignore="model")
-    
+        self.val_metrics_df = pd.DataFrame()
+        self.train_metrics_df = pd.DataFrame()
+
     def forward(self, x):
         return self.model(x)
 
@@ -27,17 +31,61 @@ class LightningClassifierModelWrapper(pl.LightningModule):
         self.log("train_loss", loss, prog_bar=True)
         return loss
 
+    def on_train_epoch_end(self):
+        """Store training loss in DataFrame"""
+        metrics_dict = {
+            "epoch": self.current_epoch,
+            "train_loss": self.trainer.callback_metrics.get("train_loss", None)
+        }
+        
+        # Convert to numeric values
+        numeric_dict = {}
+        for key, value in metrics_dict.items():
+            if value is not None:
+                numeric_dict[key] = value.item() if hasattr(value, 'item') else value
+            else:
+                numeric_dict[key] = None
+        
+        # Append to DataFrame
+        new_row = pd.DataFrame([numeric_dict])
+        self.train_metrics_df = pd.concat([self.train_metrics_df, new_row], ignore_index=True)
+
     def validation_step(self, batch, batch_idx):
         x, y = batch
         y_hat = self.model(x)
         loss = F.cross_entropy(y_hat, y)
         acc = (y_hat.argmax(1) == y).float().mean()
-        f1 = pl.metrics.classification.F1(num_classes=2)
+        recall = torchmetrics.Recall(task="binary", num_classes=2).to(self.device)  
+        recall_score = recall(y_hat.argmax(1), y)
+        f1 = torchmetrics.F1Score(task="binary", num_classes=2).to(self.device)
         f1_score = f1(y_hat.argmax(1), y)
 
         self.log("val_loss", loss, prog_bar=True, on_step=False, on_epoch=True)
         self.log("val_accuracy", acc, prog_bar=True, on_step=False, on_epoch=True)
+        self.log("val_recall", recall_score, prog_bar=True, on_step=False, on_epoch=True)
         self.log("val_f1", f1_score, prog_bar=True, on_step=False, on_epoch=True)
+
+    def on_validation_epoch_end(self):
+        """Store metrics in DataFrame"""
+        metrics_dict = {
+            "epoch": self.current_epoch,
+            "val_loss": self.trainer.callback_metrics.get("val_loss", None),
+            "val_accuracy": self.trainer.callback_metrics.get("val_accuracy", None),
+            "val_recall": self.trainer.callback_metrics.get("val_recall", None),
+            "val_f1": self.trainer.callback_metrics.get("val_f1", None)
+        }
+        
+        # Convert to numeric values
+        numeric_dict = {}
+        for key, value in metrics_dict.items():
+            if value is not None:
+                numeric_dict[key] = value.item() if hasattr(value, 'item') else value
+            else:
+                numeric_dict[key] = None
+        
+        # Append to DataFrame
+        new_row = pd.DataFrame([numeric_dict])
+        self.val_metrics_df = pd.concat([self.val_metrics_df, new_row], ignore_index=True)
 
     def predict_step(self, batch, batch_idx):
         x, y = batch
