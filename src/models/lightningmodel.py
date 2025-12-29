@@ -96,41 +96,60 @@ class LightningClassifierModelWrapper(pl.LightningModule):
         #optimizer = torch.optim.Adam(self.parameters(), lr=0.01, momentum=0.9)
         optimizer = torch.optim.SGD(self.parameters(), lr=0.01, momentum=0.9)
         return optimizer
-    
-def modelling_choice(model_name = "resnet18", max_epochs=5, pretrained=True):
+
+def hook(module, input, output):
+    activations.append(output.detach())
+
+
+def modelling_choice(model_name = "resnet18", max_epochs=5, pretrained=True, checkpoint=None):
     #set seed for reproducibility
     pl.seed_everything(42, workers=True)
-    #model selection
-    if model_name == "resnet18":
-        if pretrained:
-            model = torchvision.models.resnet18(weights="IMAGENET1K_V1")
-        else:
+    
+    #load from checkpoint if provided
+    if checkpoint:
+        trainer = None  # Trainer is not needed for inference
+        if model_name == "resnet18":
             model = torchvision.models.resnet18(weights=None)
-    elif model_name == "alexnet":
-        if pretrained:
-            model = torchvision.models.alexnet(weights="IMAGENET1K_V1")
-        else:           
+            lightning_model_loaded = model.load_from_checkpoint(checkpoint)
+            return trainer, lightning_model_loaded
+        elif model_name == "alexnet":
             model = torchvision.models.alexnet(weights=None)
+            lightning_model_loaded = model.load_from_checkpoint(checkpoint)
+            return trainer, lightning_model_loaded
+        else:
+            raise ValueError(f"Model {model_name} not (yet) supported.")
     else:
-        raise ValueError(f"Model {model_name} not (yet) supported.")
-    model.fc = torch.nn.Linear(model.fc.in_features, 2)
+        #model selection
+        if model_name == "resnet18":
+            if pretrained:
+                model = torchvision.models.resnet18(weights="IMAGENET1K_V1")
+            else:
+                model = torchvision.models.resnet18(weights=None)
+        elif model_name == "alexnet":
+            if pretrained:
+                model = torchvision.models.alexnet(weights="IMAGENET1K_V1")
+            else:           
+                model = torchvision.models.alexnet(weights=None)
+        else:
+            raise ValueError(f"Model {model_name} not (yet) supported.")
+        model.fc = torch.nn.Linear(model.fc.in_features, 2)
 
-    lightning_model = LightningClassifierModelWrapper(model)
+        lightning_model = LightningClassifierModelWrapper(model)
 
-    trainer = pl.Trainer(
-        max_epochs=max_epochs,
-        accelerator="gpu" if torch.cuda.is_available() else "cpu",
-        logger=pl_loggers.TensorBoardLogger("logs/", name="hurricane"),
-        callbacks=[
-            ModelCheckpoint(
-                dirpath="checkpoints",
-                filename=f"{model_name}-{{epoch}}-{{val_accuracy:.2f}}-{{val_f1:.2f}}",
-                monitor="val_accuracy",
-                mode="max"
-            )
-        ],
-        deterministic=True,
-    )
+        trainer = pl.Trainer(
+            max_epochs=max_epochs,
+            accelerator="gpu" if torch.cuda.is_available() else "cpu",
+            logger=pl_loggers.TensorBoardLogger("logs/", name="hurricane"),
+            callbacks=[
+                ModelCheckpoint(
+                    dirpath="checkpoints",
+                    filename=f"{model_name}-{{epoch}}-{{val_accuracy:.2f}}-{{val_f1:.2f}}",
+                    monitor="val_accuracy",
+                    mode="max"
+                )
+            ],
+            deterministic=True,
+        )
     return trainer, lightning_model
 
 def count_parameters(model):
