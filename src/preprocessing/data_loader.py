@@ -147,6 +147,8 @@ def get_transforms(mean, std, image_size=150, augment=True):
             T.RandomVerticalFlip(p=0.5),
             T.RandomRotation(degrees=20),
             T.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2, hue=0.1),
+            T.GaussianBlur(kernel_size=5, sigma=std),
+            T.GaussianNoise(mean=mean,sigma=std),     
             T.ToTensor(),
             normalize
         ])
