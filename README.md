@@ -18,12 +18,11 @@ IPEO_hurricane_assesment/
 │   ├── train/                   # Training images (damage / no_damage)
 │   ├── validation/              # Validation images
 │   └── test/                    # Test images
-├── logs/                        # TensorBoard logs
+├── logs/                        # CSV logs
 │
 └── src/
     ├── calibration.py           # Calibration utilities (Isotonic, ECE)
     ├── models/
-    │   ├── lightningmodel.py    # PyTorch Lightning wrapper
     │   └── restnet.py           # ResNet-18/50 model definitions
     └── preprocessing/
         ├── data_loader.py       # Dataset class & DataLoaders
@@ -100,5 +99,6 @@ The project uses **GeoEye-1 satellite imagery** from Hurricane Harvey:
 Cyrielle Manissadjan
 Quentin Poindextre
 Noé Staeheli
+
 
 
