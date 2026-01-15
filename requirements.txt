@@ -1,13 +1,1 @@
-ipykernel
-jupyter
-torch==2.8.0
-pillow==11.3.0
-pytorch-lightning==2.6.0
-matplotlib==3.9.4
-torchvision==0.23.0
-scikit-learn==1.7.2
-numpy==2.3.5
-pandas
-torchmetrics
-torchgeo
-seaborn
+
