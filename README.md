@@ -10,11 +10,10 @@ A deep learning project for detecting hurricane damage in satellite imagery usin
 IPEO_hurricane_assesment/
 ├── inference.py                 # Training & inference script
 ├── calibration.ipynb            # Model calibration notebook
-├── requirements.txt             # Python dependencies
 ├── environment.yaml             # Conda environment file
 │
 ├── checkpoints/                 # Trained model checkpoints (.ckpt)
-├── data/ipeo_hurricane_for_students/
+├── ipeo_hurricane_for_students/
 │   ├── train/                   # Training images (damage / no_damage)
 │   ├── validation/              # Validation images
 │   └── test/                    # Test images
@@ -23,7 +22,7 @@ IPEO_hurricane_assesment/
 └── src/
     ├── calibration.py           # Calibration utilities (Isotonic, ECE)
     ├── models/
-    │   └── restnet.py           # ResNet-18/50 model definitions
+    │   └── lightningmodel.py         # Pytorch lightning model specifications and constructors
     └── preprocessing/
         ├── data_loader.py       # Dataset class & DataLoaders
         ├── mean.pt              # Dataset normalization mean
@@ -80,7 +79,6 @@ The project uses **GeoEye-1 satellite imagery** from Hurricane Harvey:
 |------|-------------|
 | `calibration.py` | Isotonic calibration, ECE computation, reliability diagrams |
 | `models/lightningmodel.py` | PyTorch Lightning wrapper with training logic |
-| `models/restnet.py` | ResNet-18 and ResNet-50 model builders |
 | `models/train.py` | Simplified training utilities |
 | `preprocessing/data_loader.py` | `GeoEye1` dataset class, transforms, dataloaders |
 
@@ -99,6 +97,7 @@ The project uses **GeoEye-1 satellite imagery** from Hurricane Harvey:
 Cyrielle Manissadjan
 Quentin Poindextre
 Noé Staeheli
+
 
 
 
