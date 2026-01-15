@@ -37,7 +37,7 @@ IPEO_hurricane_assesment/
 ### Prerequisites
 - Python 3.10+
 - CUDA-compatible GPU (recommended)
-
+- Model checkpoint downloadable [here] (https://filesender.switch.ch/filesender2/?s=download&token=a85d269d-99df-48a8-90f4-67102b64cbd9) (until 19/02/2026)
 ### Setup
 
 ```bash
@@ -99,6 +99,7 @@ The project uses **GeoEye-1 satellite imagery** from Hurricane Harvey:
 Cyrielle Manissadjan
 Quentin Poindextre
 Noé Staeheli
+
 
 
 
