@@ -6,3 +6,10 @@
 ipeo_hurricane_for_students
 ipeo_venv
 *.zip
+*.pyc
+checkpoints
+__pycache__/
+.ipynb_checkpoints
+logs/figures
+*.run
+*.ckpt

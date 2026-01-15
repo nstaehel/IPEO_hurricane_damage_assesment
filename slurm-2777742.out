@@ -1,0 +1,226 @@
+[rank: 0] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/trainer/configuration_validator.py:70: You defined a `validation_step` but have no `val_dataloader`. Skipping val loop.
+/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:881: Checkpoint directory /home/nstaehel/IPEO_hurricane_assesment/checkpoints exists and is not empty.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+`weights_only` was not set, defaulting to `False`.
+Loaded 19000 images for train split
+Loaded 2000 images for validation split
+Loaded 2000 images for test split
+
+ Starting Experiment: Model=cnn_from_paper, Optimizer=sgd, Max Epochs=50, Augment Train=True 
+
+Finding best initial lr:   0%|          | 0/100 [00:00<?, ?it/s]Finding best initial lr:   1%|          | 1/100 [00:05<09:09,  5.55s/it]Finding best initial lr:   4%|▍         | 4/100 [00:05<01:44,  1.08s/it]Finding best initial lr:   7%|▋         | 7/100 [00:05<00:48,  1.91it/s]Finding best initial lr:  10%|█         | 10/100 [00:07<00:52,  1.71it/s]Finding best initial lr:  13%|█▎        | 13/100 [00:07<00:32,  2.65it/s]Finding best initial lr:  15%|█▌        | 15/100 [00:10<00:47,  1.77it/s]Finding best initial lr:  18%|█▊        | 18/100 [00:12<00:50,  1.62it/s]Finding best initial lr:  20%|██        | 20/100 [00:12<00:38,  2.08it/s]Finding best initial lr:  22%|██▏       | 22/100 [00:14<00:48,  1.60it/s]Finding best initial lr:  24%|██▍       | 24/100 [00:14<00:35,  2.12it/s]Finding best initial lr:  26%|██▌       | 26/100 [00:16<00:45,  1.62it/s]Finding best initial lr:  28%|██▊       | 28/100 [00:16<00:34,  2.09it/s]Finding best initial lr:  30%|███       | 30/100 [00:18<00:42,  1.64it/s]Finding best initial lr:  31%|███       | 31/100 [00:18<00:36,  1.87it/s]Finding best initial lr:  32%|███▏      | 32/100 [00:18<00:31,  2.19it/s]Finding best initial lr:  34%|███▍      | 34/100 [00:20<00:41,  1.59it/s]Finding best initial lr:  36%|███▌      | 36/100 [00:21<00:29,  2.18it/s]Finding best initial lr:  38%|███▊      | 38/100 [00:22<00:36,  1.68it/s]Finding best initial lr:  39%|███▉      | 39/100 [00:23<00:31,  1.95it/s]Finding best initial lr:  40%|████      | 40/100 [00:23<00:25,  2.35it/s]Finding best initial lr:  42%|████▏     | 42/100 [00:24<00:34,  1.67it/s]Finding best initial lr:  43%|████▎     | 43/100 [00:25<00:28,  1.98it/s]Finding best initial lr:  44%|████▍     | 44/100 [00:25<00:25,  2.23it/s]Finding best initial lr:  46%|████▌     | 46/100 [00:27<00:34,  1.58it/s]Finding best initial lr:  48%|████▊     | 48/100 [00:27<00:22,  2.32it/s]Finding best initial lr:  50%|█████     | 50/100 [00:29<00:30,  1.66it/s]Finding best initial lr:  51%|█████     | 51/100 [00:29<00:25,  1.95it/s]Finding best initial lr:  54%|█████▍    | 54/100 [00:31<00:25,  1.80it/s]Finding best initial lr:  55%|█████▌    | 55/100 [00:31<00:23,  1.93it/s]Finding best initial lr:  58%|█████▊    | 58/100 [00:33<00:22,  1.84it/s]Finding best initial lr:  59%|█████▉    | 59/100 [00:33<00:20,  1.96it/s]Finding best initial lr:  62%|██████▏   | 62/100 [00:35<00:20,  1.89it/s]Finding best initial lr:  63%|██████▎   | 63/100 [00:35<00:18,  2.05it/s]Finding best initial lr:  66%|██████▌   | 66/100 [00:37<00:18,  1.88it/s]Finding best initial lr:  67%|██████▋   | 67/100 [00:37<00:16,  2.03it/s]Finding best initial lr:  70%|███████   | 70/100 [00:39<00:16,  1.83it/s]Finding best initial lr:  71%|███████   | 71/100 [00:39<00:13,  2.10it/s]Finding best initial lr:  74%|███████▍  | 74/100 [00:41<00:13,  1.87it/s]Finding best initial lr:  75%|███████▌  | 75/100 [00:41<00:11,  2.11it/s]Finding best initial lr:  78%|███████▊  | 78/100 [00:43<00:11,  1.88it/s]Finding best initial lr:  79%|███████▉  | 79/100 [00:43<00:10,  2.07it/s]Finding best initial lr:  82%|████████▏ | 82/100 [00:45<00:10,  1.79it/s]Finding best initial lr:  83%|████████▎ | 83/100 [00:45<00:08,  1.97it/s]Finding best initial lr:  86%|████████▌ | 86/100 [00:47<00:07,  1.84it/s]Finding best initial lr:  88%|████████▊ | 88/100 [00:47<00:04,  2.45it/s]Finding best initial lr:  90%|█████████ | 90/100 [00:49<00:05,  1.81it/s]Finding best initial lr:  91%|█████████ | 91/100 [00:49<00:04,  1.97it/s]Finding best initial lr:  94%|█████████▍| 94/100 [00:51<00:03,  1.96it/s]Finding best initial lr:  95%|█████████▌| 95/100 [00:51<00:02,  2.04it/s]Finding best initial lr:  98%|█████████▊| 98/100 [00:53<00:01,  1.97it/s]Finding best initial lr:  99%|█████████▉| 99/100 [00:53<00:00,  2.06it/s]`Trainer.fit` stopped: `max_steps=100` reached.
+Finding best initial lr: 100%|██████████| 100/100 [00:53<00:00,  1.86it/s]
+Restoring states from the checkpoint path at /home/nstaehel/IPEO_hurricane_assesment/.lr_find_dcf0e562-2503-426c-a4a1-f678d50c650d.ckpt
+Restored all states from the checkpoint at /home/nstaehel/IPEO_hurricane_assesment/.lr_find_dcf0e562-2503-426c-a4a1-f678d50c650d.ckpt
+Learning rate set to 0.0013182567385564075
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Optimal LR found: 0.0013182567385564075
+┏━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name            ┃ Type                  ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ model           │ CNNModel_from_paper   │  5.6 M │ train │     0 │
+│ 1 │ val_conf_matrix │ BinaryConfusionMatrix │      0 │ train │     0 │
+│ 2 │ val_recall      │ BinaryRecall          │      0 │ train │     0 │
+│ 3 │ val_precision   │ BinaryPrecision       │      0 │ train │     0 │
+│ 4 │ val_f1          │ BinaryF1Score         │      0 │ train │     0 │
+└───┴─────────────────┴───────────────────────┴────────┴───────┴───────┘
+Trainable params: 5.6 M                                                         
+Non-trainable params: 0                                                         
+Total params: 5.6 M                                                             
+Total estimated model params size (MB): 22                                      
+Modules in train mode: 15                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+SLURM auto-requeueing enabled. Setting signal handlers.
+Metric val_f1 improved. New best score: 0.699
+Metric val_f1 improved by 0.038 >= min_delta = 0.0. New best score: 0.736
+Metric val_f1 improved by 0.042 >= min_delta = 0.0. New best score: 0.779
+Metric val_f1 improved by 0.132 >= min_delta = 0.0. New best score: 0.910
+Metric val_f1 improved by 0.006 >= min_delta = 0.0. New best score: 0.916
+Metric val_f1 improved by 0.004 >= min_delta = 0.0. New best score: 0.920
+Metric val_f1 improved by 0.002 >= min_delta = 0.0. New best score: 0.922
+Metric val_f1 improved by 0.005 >= min_delta = 0.0. New best score: 0.927
+Metric val_f1 improved by 0.010 >= min_delta = 0.0. New best score: 0.937
+Metric val_f1 improved by 0.010 >= min_delta = 0.0. New best score: 0.947
+Metric val_f1 improved by 0.000 >= min_delta = 0.0. New best score: 0.947
+Metric val_f1 improved by 0.006 >= min_delta = 0.0. New best score: 0.953
+Monitored metric val_f1 did not improve in the last 5 records. Best score: 0.953. Signaling Trainer to stop.
+Epoch 28/49 ━━━━━━━━━━━━━━━━ 190/190 0:00:19 •        9.90it/s v_num: 2.000     
+                                     0:00:00                   train_loss: 0.161
+                                                               val_loss: 0.153  
+                                                               val_accuracy:    
+                                                               0.933 val_recall:
+                                                               0.991            
+                                                               val_precision:   
+                                                               0.888 val_f1:    
+                                                               0.937            
+[rank: 0] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/trainer/configuration_validator.py:70: You defined a `validation_step` but have no `val_dataloader`. Skipping val loop.
+/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:881: Checkpoint directory /home/nstaehel/IPEO_hurricane_assesment/checkpoints exists and is not empty.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+`weights_only` was not set, defaulting to `False`.
+
+ Starting Experiment: Model=cnn_from_paper, Optimizer=adam, Max Epochs=50, Augment Train=True 
+
+Finding best initial lr:   0%|          | 0/100 [00:00<?, ?it/s]Finding best initial lr:   1%|          | 1/100 [00:00<01:04,  1.54it/s]Finding best initial lr:   4%|▍         | 4/100 [00:00<00:14,  6.48it/s]Finding best initial lr:   7%|▋         | 7/100 [00:00<00:08, 10.81it/s]Finding best initial lr:  10%|█         | 10/100 [00:01<00:07, 12.05it/s]Finding best initial lr:  13%|█▎        | 13/100 [00:01<00:05, 14.84it/s]Finding best initial lr:  15%|█▌        | 15/100 [00:01<00:07, 10.69it/s]Finding best initial lr:  18%|█▊        | 18/100 [00:01<00:08,  9.82it/s]Finding best initial lr:  20%|██        | 20/100 [00:02<00:07, 11.27it/s]Finding best initial lr:  22%|██▏       | 22/100 [00:02<00:08,  9.47it/s]Finding best initial lr:  24%|██▍       | 24/100 [00:02<00:06, 11.02it/s]Finding best initial lr:  26%|██▌       | 26/100 [00:02<00:07,  9.34it/s]Finding best initial lr:  28%|██▊       | 28/100 [00:02<00:06, 10.91it/s]Finding best initial lr:  30%|███       | 30/100 [00:03<00:07,  9.25it/s]Finding best initial lr:  32%|███▏      | 32/100 [00:03<00:06, 10.82it/s]Finding best initial lr:  34%|███▍      | 34/100 [00:03<00:07,  9.26it/s]Finding best initial lr:  36%|███▌      | 36/100 [00:03<00:05, 10.75it/s]Finding best initial lr:  38%|███▊      | 38/100 [00:03<00:06,  9.16it/s]Finding best initial lr:  40%|████      | 40/100 [00:04<00:05, 10.40it/s]Finding best initial lr:  42%|████▏     | 42/100 [00:04<00:06,  9.23it/s]Finding best initial lr:  44%|████▍     | 44/100 [00:04<00:05, 10.61it/s]Finding best initial lr:  46%|████▌     | 46/100 [00:04<00:05,  9.24it/s]Finding best initial lr:  48%|████▊     | 48/100 [00:04<00:04, 10.62it/s]Finding best initial lr:  50%|█████     | 50/100 [00:05<00:05,  9.25it/s]Finding best initial lr:  52%|█████▏    | 52/100 [00:05<00:04, 10.63it/s]Finding best initial lr:  54%|█████▍    | 54/100 [00:05<00:04,  9.29it/s]Finding best initial lr:  56%|█████▌    | 56/100 [00:05<00:04, 10.54it/s]Finding best initial lr:  58%|█████▊    | 58/100 [00:05<00:04,  9.30it/s]Finding best initial lr:  60%|██████    | 60/100 [00:06<00:03, 10.55it/s]Finding best initial lr:  62%|██████▏   | 62/100 [00:06<00:04,  9.36it/s]Finding best initial lr:  64%|██████▍   | 64/100 [00:06<00:03, 10.57it/s]Finding best initial lr:  66%|██████▌   | 66/100 [00:06<00:03,  9.21it/s]Finding best initial lr:  68%|██████▊   | 68/100 [00:06<00:03, 10.33it/s]Finding best initial lr:  70%|███████   | 70/100 [00:07<00:03,  9.27it/s]Finding best initial lr:  72%|███████▏  | 72/100 [00:07<00:02, 10.47it/s]Finding best initial lr:  74%|███████▍  | 74/100 [00:07<00:02,  9.33it/s]Finding best initial lr:  76%|███████▌  | 76/100 [00:07<00:02, 10.51it/s]Finding best initial lr:  78%|███████▊  | 78/100 [00:07<00:02,  9.42it/s]Finding best initial lr:  80%|████████  | 80/100 [00:08<00:01, 10.46it/s]Finding best initial lr:  82%|████████▏ | 82/100 [00:08<00:01,  9.33it/s]Finding best initial lr:  84%|████████▍ | 84/100 [00:08<00:01, 10.44it/s]Finding best initial lr:  86%|████████▌ | 86/100 [00:08<00:01,  9.44it/s]Finding best initial lr:  88%|████████▊ | 88/100 [00:08<00:01, 10.44it/s]Finding best initial lr:  89%|████████▉ | 89/100 [00:08<00:01,  9.94it/s]
+LR finder stopped early after 89 steps due to diverging loss.
+Restoring states from the checkpoint path at /home/nstaehel/IPEO_hurricane_assesment/.lr_find_89cb7820-8605-4104-8da6-08a780f47eb3.ckpt
+Restored all states from the checkpoint at /home/nstaehel/IPEO_hurricane_assesment/.lr_find_89cb7820-8605-4104-8da6-08a780f47eb3.ckpt
+Learning rate set to 3.311311214825911e-05
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Optimal LR found: 3.311311214825911e-05
+┏━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name            ┃ Type                  ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ model           │ CNNModel_from_paper   │  5.6 M │ train │     0 │
+│ 1 │ val_conf_matrix │ BinaryConfusionMatrix │      0 │ train │     0 │
+│ 2 │ val_recall      │ BinaryRecall          │      0 │ train │     0 │
+│ 3 │ val_precision   │ BinaryPrecision       │      0 │ train │     0 │
+│ 4 │ val_f1          │ BinaryF1Score         │      0 │ train │     0 │
+└───┴─────────────────┴───────────────────────┴────────┴───────┴───────┘
+Trainable params: 5.6 M                                                         
+Non-trainable params: 0                                                         
+Total params: 5.6 M                                                             
+Total estimated model params size (MB): 22                                      
+Modules in train mode: 15                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+SLURM auto-requeueing enabled. Setting signal handlers.
+Metric val_f1 improved. New best score: 0.800
+Metric val_f1 improved by 0.101 >= min_delta = 0.0. New best score: 0.901
+Metric val_f1 improved by 0.008 >= min_delta = 0.0. New best score: 0.909
+Metric val_f1 improved by 0.006 >= min_delta = 0.0. New best score: 0.915
+Metric val_f1 improved by 0.005 >= min_delta = 0.0. New best score: 0.920
+Metric val_f1 improved by 0.002 >= min_delta = 0.0. New best score: 0.922
+Metric val_f1 improved by 0.006 >= min_delta = 0.0. New best score: 0.928
+Metric val_f1 improved by 0.002 >= min_delta = 0.0. New best score: 0.929
+Metric val_f1 improved by 0.010 >= min_delta = 0.0. New best score: 0.939
+Metric val_f1 improved by 0.002 >= min_delta = 0.0. New best score: 0.940
+Metric val_f1 improved by 0.000 >= min_delta = 0.0. New best score: 0.941
+Metric val_f1 improved by 0.004 >= min_delta = 0.0. New best score: 0.944
+Monitored metric val_f1 did not improve in the last 5 records. Best score: 0.944. Signaling Trainer to stop.
+Epoch 28/49 ━━━━━━━━━━━━━━━━ 190/190 0:00:19 •        9.85it/s v_num: 0.000     
+                                     0:00:00                   train_loss: 0.156
+                                                               val_loss: 0.187  
+                                                               val_accuracy:    
+                                                               0.928 val_recall:
+                                                               0.991            
+                                                               val_precision:   
+                                                               0.879 val_f1:    
+                                                               0.932            
+[rank: 0] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/trainer/configuration_validator.py:70: You defined a `validation_step` but have no `val_dataloader`. Skipping val loop.
+/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:881: Checkpoint directory /home/nstaehel/IPEO_hurricane_assesment/checkpoints exists and is not empty.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+`weights_only` was not set, defaulting to `False`.
+Loaded 19000 images for train split
+Loaded 2000 images for validation split
+Loaded 2000 images for test split
+
+ Starting Experiment: Model=cnn_from_paper, Optimizer=sgd, Max Epochs=50, Augment Train=False 
+
+Finding best initial lr:   0%|          | 0/100 [00:00<?, ?it/s]Finding best initial lr:   3%|▎         | 3/100 [00:00<00:03, 25.05it/s]Finding best initial lr:   6%|▌         | 6/100 [00:00<00:03, 24.76it/s]Finding best initial lr:   9%|▉         | 9/100 [00:00<00:03, 23.65it/s]Finding best initial lr:  12%|█▏        | 12/100 [00:00<00:03, 24.44it/s]Finding best initial lr:  15%|█▌        | 15/100 [00:00<00:03, 24.35it/s]Finding best initial lr:  18%|█▊        | 18/100 [00:00<00:03, 24.23it/s]Finding best initial lr:  21%|██        | 21/100 [00:00<00:03, 24.05it/s]Finding best initial lr:  24%|██▍       | 24/100 [00:00<00:03, 24.67it/s]Finding best initial lr:  27%|██▋       | 27/100 [00:01<00:03, 24.14it/s]Finding best initial lr:  30%|███       | 30/100 [00:01<00:02, 23.89it/s]Finding best initial lr:  33%|███▎      | 33/100 [00:01<00:02, 23.77it/s]Finding best initial lr:  36%|███▌      | 36/100 [00:01<00:02, 23.84it/s]Finding best initial lr:  39%|███▉      | 39/100 [00:01<00:02, 23.25it/s]Finding best initial lr:  42%|████▏     | 42/100 [00:01<00:02, 23.16it/s]Finding best initial lr:  45%|████▌     | 45/100 [00:01<00:02, 24.03it/s]Finding best initial lr:  48%|████▊     | 48/100 [00:02<00:02, 23.27it/s]Finding best initial lr:  51%|█████     | 51/100 [00:02<00:02, 23.39it/s]Finding best initial lr:  54%|█████▍    | 54/100 [00:02<00:01, 23.43it/s]Finding best initial lr:  57%|█████▋    | 57/100 [00:02<00:01, 24.16it/s]Finding best initial lr:  60%|██████    | 60/100 [00:02<00:01, 22.77it/s]Finding best initial lr:  63%|██████▎   | 63/100 [00:02<00:01, 22.88it/s]Finding best initial lr:  66%|██████▌   | 66/100 [00:02<00:01, 22.97it/s]Finding best initial lr:  69%|██████▉   | 69/100 [00:02<00:01, 23.84it/s]Finding best initial lr:  72%|███████▏  | 72/100 [00:03<00:01, 23.80it/s]Finding best initial lr:  75%|███████▌  | 75/100 [00:03<00:01, 23.71it/s]Finding best initial lr:  78%|███████▊  | 78/100 [00:03<00:00, 23.37it/s]Finding best initial lr:  81%|████████  | 81/100 [00:03<00:00, 24.15it/s]Finding best initial lr:  84%|████████▍ | 84/100 [00:03<00:00, 24.48it/s]Finding best initial lr:  87%|████████▋ | 87/100 [00:03<00:00, 24.28it/s]Finding best initial lr:  90%|█████████ | 90/100 [00:03<00:00, 24.20it/s]Finding best initial lr:  93%|█████████▎| 93/100 [00:03<00:00, 24.75it/s]Finding best initial lr:  96%|█████████▌| 96/100 [00:04<00:00, 23.97it/s]Finding best initial lr:  99%|█████████▉| 99/100 [00:04<00:00, 23.94it/s]`Trainer.fit` stopped: `max_steps=100` reached.
+Finding best initial lr: 100%|██████████| 100/100 [00:04<00:00, 23.86it/s]
+Restoring states from the checkpoint path at /home/nstaehel/IPEO_hurricane_assesment/.lr_find_8f539eea-5ecd-4112-9b14-302eadf8dc8d.ckpt
+Restored all states from the checkpoint at /home/nstaehel/IPEO_hurricane_assesment/.lr_find_8f539eea-5ecd-4112-9b14-302eadf8dc8d.ckpt
+Learning rate set to 0.0022908676527677745
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Optimal LR found: 0.0022908676527677745
+┏━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name            ┃ Type                  ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ model           │ CNNModel_from_paper   │  5.6 M │ train │     0 │
+│ 1 │ val_conf_matrix │ BinaryConfusionMatrix │      0 │ train │     0 │
+│ 2 │ val_recall      │ BinaryRecall          │      0 │ train │     0 │
+│ 3 │ val_precision   │ BinaryPrecision       │      0 │ train │     0 │
+│ 4 │ val_f1          │ BinaryF1Score         │      0 │ train │     0 │
+└───┴─────────────────┴───────────────────────┴────────┴───────┴───────┘
+Trainable params: 5.6 M                                                         
+Non-trainable params: 0                                                         
+Total params: 5.6 M                                                             
+Total estimated model params size (MB): 22                                      
+Modules in train mode: 15                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+SLURM auto-requeueing enabled. Setting signal handlers.
+Metric val_f1 improved. New best score: 0.885
+Metric val_f1 improved by 0.025 >= min_delta = 0.0. New best score: 0.910
+Metric val_f1 improved by 0.002 >= min_delta = 0.0. New best score: 0.913
+Metric val_f1 improved by 0.016 >= min_delta = 0.0. New best score: 0.928
+Metric val_f1 improved by 0.002 >= min_delta = 0.0. New best score: 0.931
+Metric val_f1 improved by 0.009 >= min_delta = 0.0. New best score: 0.940
+Monitored metric val_f1 did not improve in the last 5 records. Best score: 0.940. Signaling Trainer to stop.
+Epoch 11/49 ━━━━━━━━━━━━━━━━ 190/190 0:00:08 •       23.13it/s v_num: 3.000     
+                                     0:00:00                   train_loss: 0.064
+                                                               val_loss: 0.172  
+                                                               val_accuracy:    
+                                                               0.929 val_recall:
+                                                               0.996            
+                                                               val_precision:   
+                                                               0.879 val_f1:    
+                                                               0.934            
+[rank: 0] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/trainer/configuration_validator.py:70: You defined a `validation_step` but have no `val_dataloader`. Skipping val loop.
+/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:881: Checkpoint directory /home/nstaehel/IPEO_hurricane_assesment/checkpoints exists and is not empty.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+`weights_only` was not set, defaulting to `False`.
+
+ Starting Experiment: Model=cnn_from_paper, Optimizer=adam, Max Epochs=50, Augment Train=False 
+
+Finding best initial lr:   0%|          | 0/100 [00:00<?, ?it/s]Finding best initial lr:   3%|▎         | 3/100 [00:00<00:04, 24.16it/s]Finding best initial lr:   6%|▌         | 6/100 [00:00<00:03, 24.76it/s]Finding best initial lr:   9%|▉         | 9/100 [00:00<00:03, 24.42it/s]Finding best initial lr:  12%|█▏        | 12/100 [00:00<00:03, 24.76it/s]Finding best initial lr:  15%|█▌        | 15/100 [00:00<00:03, 24.34it/s]Finding best initial lr:  18%|█▊        | 18/100 [00:00<00:03, 23.78it/s]Finding best initial lr:  21%|██        | 21/100 [00:00<00:03, 23.04it/s]Finding best initial lr:  24%|██▍       | 24/100 [00:01<00:03, 23.68it/s]Finding best initial lr:  27%|██▋       | 27/100 [00:01<00:03, 24.04it/s]Finding best initial lr:  30%|███       | 30/100 [00:01<00:02, 24.00it/s]Finding best initial lr:  33%|███▎      | 33/100 [00:01<00:02, 23.55it/s]Finding best initial lr:  36%|███▌      | 36/100 [00:01<00:02, 24.13it/s]Finding best initial lr:  39%|███▉      | 39/100 [00:01<00:02, 23.84it/s]Finding best initial lr:  42%|████▏     | 42/100 [00:01<00:02, 21.94it/s]Finding best initial lr:  45%|████▌     | 45/100 [00:01<00:02, 21.62it/s]Finding best initial lr:  48%|████▊     | 48/100 [00:02<00:02, 22.61it/s]Finding best initial lr:  51%|█████     | 51/100 [00:02<00:02, 22.66it/s]Finding best initial lr:  54%|█████▍    | 54/100 [00:02<00:02, 22.53it/s]Finding best initial lr:  57%|█████▋    | 57/100 [00:02<00:01, 22.82it/s]Finding best initial lr:  60%|██████    | 60/100 [00:02<00:01, 23.55it/s]Finding best initial lr:  63%|██████▎   | 63/100 [00:02<00:01, 23.46it/s]Finding best initial lr:  66%|██████▌   | 66/100 [00:02<00:01, 23.57it/s]Finding best initial lr:  69%|██████▉   | 69/100 [00:02<00:01, 23.51it/s]Finding best initial lr:  72%|███████▏  | 72/100 [00:03<00:01, 24.10it/s]Finding best initial lr:  75%|███████▌  | 75/100 [00:03<00:01, 23.95it/s]Finding best initial lr:  78%|███████▊  | 78/100 [00:03<00:00, 23.78it/s]Finding best initial lr:  81%|████████  | 81/100 [00:03<00:00, 23.97it/s]Finding best initial lr:  84%|████████▍ | 84/100 [00:03<00:00, 24.41it/s]Finding best initial lr:  87%|████████▋ | 87/100 [00:03<00:00, 23.80it/s]Finding best initial lr:  90%|█████████ | 90/100 [00:03<00:00, 23.81it/s]Finding best initial lr:  93%|█████████▎| 93/100 [00:03<00:00, 23.68it/s]Finding best initial lr:  96%|█████████▌| 96/100 [00:04<00:00, 24.16it/s]Finding best initial lr:  99%|█████████▉| 99/100 [00:04<00:00, 24.33it/s]`Trainer.fit` stopped: `max_steps=100` reached.
+Finding best initial lr: 100%|██████████| 100/100 [00:04<00:00, 23.65it/s]
+Restoring states from the checkpoint path at /home/nstaehel/IPEO_hurricane_assesment/.lr_find_9620b687-2c0d-4266-ba8b-6a936771c3dc.ckpt
+Restored all states from the checkpoint at /home/nstaehel/IPEO_hurricane_assesment/.lr_find_9620b687-2c0d-4266-ba8b-6a936771c3dc.ckpt
+Learning rate set to 3.311311214825911e-05
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Optimal LR found: 3.311311214825911e-05
+┏━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name            ┃ Type                  ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ model           │ CNNModel_from_paper   │  5.6 M │ train │     0 │
+│ 1 │ val_conf_matrix │ BinaryConfusionMatrix │      0 │ train │     0 │
+│ 2 │ val_recall      │ BinaryRecall          │      0 │ train │     0 │
+│ 3 │ val_precision   │ BinaryPrecision       │      0 │ train │     0 │
+│ 4 │ val_f1          │ BinaryF1Score         │      0 │ train │     0 │
+└───┴─────────────────┴───────────────────────┴────────┴───────┴───────┘
+Trainable params: 5.6 M                                                         
+Non-trainable params: 0                                                         
+Total params: 5.6 M                                                             
+Total estimated model params size (MB): 22                                      
+Modules in train mode: 15                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+SLURM auto-requeueing enabled. Setting signal handlers.
+Metric val_f1 improved. New best score: 0.911
+Metric val_f1 improved by 0.006 >= min_delta = 0.0. New best score: 0.917
+Metric val_f1 improved by 0.008 >= min_delta = 0.0. New best score: 0.925
+Metric val_f1 improved by 0.013 >= min_delta = 0.0. New best score: 0.937
+Metric val_f1 improved by 0.010 >= min_delta = 0.0. New best score: 0.948
+Monitored metric val_f1 did not improve in the last 5 records. Best score: 0.948. Signaling Trainer to stop.
+Epoch 12/49 ━━━━━━━━━━━━━━━━ 190/190 0:00:08 •       22.77it/s v_num: 1.000     
+                                     0:00:00                   train_loss: 0.055
+                                                               val_loss: 0.278  
+                                                               val_accuracy:    
+                                                               0.896 val_recall:
+                                                               0.997            
+                                                               val_precision:   
+                                                               0.830 val_f1:    
+                                                               0.906            
+
+--- Experiment Summary ---
+     architecture optimizer  augment_train  ...   best_lr  best_val_loss  epochs_run
+3  cnn_from_paper      adam          False  ...  0.000033       0.220148          13
+2  cnn_from_paper       sgd          False  ...  0.002291       0.174910          12
+1  cnn_from_paper      adam           True  ...  0.000033       0.161254          29
+0  cnn_from_paper       sgd           True  ...  0.001318       0.158413          29
+
+[4 rows x 8 columns]

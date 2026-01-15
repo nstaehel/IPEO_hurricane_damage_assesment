@@ -2,51 +2,71 @@ import pandas as pd
 from src.models.lightningmodel import modelling_choice
 import torch
 from src.preprocessing.data_loader import get_dataloaders
+from pytorch_lightning.callbacks import Timer
+import os
 
-# Define your search space
-architectures = ["resnet18", "resnet50", "alexnet"]
+os.environ['CUDA_LAUNCH_BLOCKING'] = '1'
+
+# Search space
+architectures = ["resnet18", "resnet50", "alexnet", "cnn_from_paper"]
 optimizers = ["sgd", "adam"]
 results_list = []
+timer_list= {}
+augment_train_list = [True, False]
 
 root_dir="ipeo_hurricane_for_students"
-ckpt_path = "checkpoints/resnet18-sgd-0.01-epoch=18-val_accuracy=0.66-val_f1=0.47.ckpt"
 mean = torch.load("src/preprocessing/mean.pt")
 std = torch.load("src/preprocessing/std.pt")
-train_loader, val_loader, _ = get_dataloaders(root_dir=root_dir, mean=mean, std=std, batch_size=100, num_workers=4)
 
-for arch in architectures:
-    for opt in optimizers:
-        print(f"\n Starting Experiment: Model={arch}, Optimizer={opt}, Max Epochs=20")
-        
-        # 1. Initialize Trainer and Model
-        trainer, lightning_model = modelling_choice(
-            model_name=arch, 
-            optimizer_name=opt, 
-            max_epochs=20, # Early stopping will likely cut this short
-            train_loader=train_loader
-        )
-        # Logic to resume ONLY if this is the resnet18/sgd run
-        if arch == "resnet18" and opt == "sgd":
-            print(f"Resuming {arch} from checkpoint...")
-            trainer.fit(lightning_model, train_loader, val_loader, ckpt_path=ckpt_path)
-        else:
-            # 2. Train the model
+max_epochs = 50
+for augment_train in augment_train_list:
+    train_loader, val_loader, _ = get_dataloaders(root_dir=root_dir, mean=mean, std=std, batch_size=100, num_workers=4, augment_train=augment_train)
+    for arch in architectures:
+        for opt in optimizers:
+            print(f"\n Starting Experiment: Model={arch}, Optimizer={opt}, Max Epochs={max_epochs}, Augment Train={augment_train} \n")
+            
+            # Trainer and model setup
+            trainer, lightning_model = modelling_choice(
+                pretrained=True,
+                patience=5,
+                model_name=arch, 
+                optimizer_name=opt, 
+                max_epochs=max_epochs, # Early stopping will likely cut this short
+                train_loader=train_loader,
+                layer_to_freeze=2,
+                train_is_augmented=augment_train
+            )
+            # Model training
             trainer.fit(lightning_model, train_loader, val_loader)
             
-            # 3. Extract best metrics from callbacks or logger
-            # We take the best score recorded by ModelCheckpoint
+            # Metrics extraction
+            # The best score is the mininum validation loss achieved during training
             best_score = trainer.checkpoint_callback.best_model_score.item()
-            
+            timer_callback = None
+            for callback in trainer.callbacks:
+                if isinstance(callback, Timer):
+                    timer_callback = callback
+                    break
+
+            if timer_callback:
+                timer = timer_callback.time_elapsed("train")
+                timer_list[f"{arch}-{opt}-augment_train-{augment_train}"] = timer
+            else:
+                print("Timer callback not found in trainer.callbacks")
+                timer = None
             results_list.append({
                 "architecture": arch,
                 "optimizer": opt,
+                "augment_train": augment_train,
+                "max_epochs": max_epochs,
+                "training_time_sec": timer,
                 "best_lr": lightning_model.lr,
-                "best_val_acc": best_score,
+                "best_val_loss": best_score,
                 "epochs_run": trainer.current_epoch
             })
 
-# 4. Create Leaderboard
+# Save results to CSV after all experiments
 df_results = pd.DataFrame(results_list)
 df_results.to_csv("model_comparison_results.csv", index=False)
 print("\n--- Experiment Summary ---")
-print(df_results.sort_values(by="best_val_acc", ascending=False))
+print(df_results.sort_values(by="best_val_loss", ascending=False))

@@ -1,0 +1,4 @@
+optimizer_name: sgd
+lr: 0.01
+name: resnet50
+train_is_augmented: true

@@ -147,9 +147,8 @@ def get_transforms(mean, std, image_size=150, augment=True):
             T.RandomVerticalFlip(p=0.5),
             T.RandomRotation(degrees=20),
             T.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2, hue=0.1),
-            T.GaussianBlur(kernel_size=5, sigma=std),
-            T.GaussianNoise(mean=mean,sigma=std),     
-            T.ToTensor(),
+            #T.GaussianBlur(kernel_size=5, sigma=(0.0,2.0)),
+            T.ToTensor(),     
             normalize
         ])
     else:
@@ -163,7 +162,7 @@ def get_transforms(mean, std, image_size=150, augment=True):
     return transforms
 
 
-def get_dataloaders(root_dir, mean, std, image_size=150, batch_size=32, num_workers=4):
+def get_dataloaders(root_dir, mean, std, image_size=150, batch_size=32, num_workers=4, augment_train=True):
     """
     Create train, validation, and test dataloaders
     
@@ -180,8 +179,10 @@ def get_dataloaders(root_dir, mean, std, image_size=150, batch_size=32, num_work
     """
     transforms_train = get_transforms(mean, std, image_size, augment=True)
     transforms_val = get_transforms(mean, std, image_size, augment=False)
-    
-    train_dataset = GeoEye1(root_dir, "train", transforms_train)
+    if augment_train == False:
+        train_dataset = GeoEye1(root_dir, "train", transforms_val)
+    else:
+        train_dataset = GeoEye1(root_dir, "train", transforms_train)
     val_dataset = GeoEye1(root_dir, "validation", transforms_val)
     test_dataset = GeoEye1(root_dir, "test", transforms_val)
     

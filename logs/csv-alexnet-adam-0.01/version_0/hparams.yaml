@@ -1,0 +1,4 @@
+optimizer_name: adam
+lr: 0.01
+name: alexnet
+train_is_augmented: true

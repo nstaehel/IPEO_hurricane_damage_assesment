@@ -1,0 +1,568 @@
+[rank: 0] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/trainer/configuration_validator.py:70: You defined a `validation_step` but have no `val_dataloader`. Skipping val loop.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+`weights_only` was not set, defaulting to `False`.
+Loaded 19000 images for train split
+Loaded 2000 images for validation split
+Loaded 2000 images for test split
+
+ Starting Experiment: Model=resnet18, Optimizer=sgd, Max Epochs=50, Augment Train=True 
+
+Finding best initial lr:   0%|          | 0/100 [00:00<?, ?it/s]Finding best initial lr:   1%|          | 1/100 [00:06<11:07,  6.74s/it]Finding best initial lr:   5%|▌         | 5/100 [00:06<01:37,  1.03s/it]Finding best initial lr:   8%|▊         | 8/100 [00:06<00:51,  1.80it/s]Finding best initial lr:  11%|█         | 11/100 [00:09<00:56,  1.58it/s]Finding best initial lr:  14%|█▍        | 14/100 [00:11<00:57,  1.49it/s]Finding best initial lr:  16%|█▌        | 16/100 [00:11<00:43,  1.94it/s]Finding best initial lr:  18%|█▊        | 18/100 [00:14<00:58,  1.41it/s]Finding best initial lr:  21%|██        | 21/100 [00:14<00:36,  2.16it/s]Finding best initial lr:  23%|██▎       | 23/100 [00:16<00:47,  1.61it/s]Finding best initial lr:  26%|██▌       | 26/100 [00:18<00:49,  1.50it/s]Finding best initial lr:  29%|██▉       | 29/100 [00:18<00:32,  2.20it/s]Finding best initial lr:  31%|███       | 31/100 [00:20<00:42,  1.64it/s]Finding best initial lr:  34%|███▍      | 34/100 [00:23<00:42,  1.54it/s]Finding best initial lr:  37%|███▋      | 37/100 [00:23<00:28,  2.23it/s]Finding best initial lr:  39%|███▉      | 39/100 [00:25<00:36,  1.65it/s]Finding best initial lr:  42%|████▏     | 42/100 [00:27<00:38,  1.51it/s]Finding best initial lr:  45%|████▌     | 45/100 [00:27<00:25,  2.19it/s]Finding best initial lr:  47%|████▋     | 47/100 [00:29<00:32,  1.64it/s]Finding best initial lr:  50%|█████     | 50/100 [00:32<00:31,  1.56it/s]Finding best initial lr:  51%|█████     | 51/100 [00:32<00:27,  1.77it/s]Finding best initial lr:  54%|█████▍    | 54/100 [00:34<00:28,  1.60it/s]Finding best initial lr:  57%|█████▋    | 57/100 [00:34<00:18,  2.36it/s]Finding best initial lr:  59%|█████▉    | 59/100 [00:36<00:24,  1.69it/s]Finding best initial lr:  62%|██████▏   | 62/100 [00:38<00:23,  1.58it/s]Finding best initial lr:  65%|██████▌   | 65/100 [00:38<00:15,  2.30it/s]Finding best initial lr:  67%|██████▋   | 67/100 [00:41<00:19,  1.70it/s]Finding best initial lr:  70%|███████   | 70/100 [00:43<00:19,  1.57it/s]Finding best initial lr:  73%|███████▎  | 73/100 [00:43<00:11,  2.28it/s]Finding best initial lr:  75%|███████▌  | 75/100 [00:45<00:15,  1.65it/s]Finding best initial lr:  78%|███████▊  | 78/100 [00:47<00:14,  1.53it/s]Finding best initial lr:  81%|████████  | 81/100 [00:47<00:08,  2.21it/s]Finding best initial lr:  83%|████████▎ | 83/100 [00:50<00:10,  1.69it/s]Finding best initial lr:  86%|████████▌ | 86/100 [00:52<00:08,  1.60it/s]Finding best initial lr:  88%|████████▊ | 88/100 [00:52<00:05,  2.01it/s]Finding best initial lr:  90%|█████████ | 90/100 [00:54<00:06,  1.56it/s]Finding best initial lr:  92%|█████████▏| 92/100 [00:54<00:03,  2.03it/s]Finding best initial lr:  94%|█████████▍| 94/100 [00:56<00:03,  1.59it/s]Finding best initial lr:  97%|█████████▋| 97/100 [00:56<00:01,  2.46it/s]Finding best initial lr:  99%|█████████▉| 99/100 [00:58<00:00,  1.73it/s]Finding best initial lr: 100%|██████████| 100/100 [00:58<00:00,  1.94it/s]`Trainer.fit` stopped: `max_steps=100` reached.
+Finding best initial lr: 100%|██████████| 100/100 [00:59<00:00,  1.69it/s]
+Restoring states from the checkpoint path at /home/nstaehel/IPEO_hurricane_assesment/.lr_find_be47a3b4-53c5-480d-9d8e-7d02d5566eba.ckpt
+Restored all states from the checkpoint at /home/nstaehel/IPEO_hurricane_assesment/.lr_find_be47a3b4-53c5-480d-9d8e-7d02d5566eba.ckpt
+Learning rate set to 0.005754399373371567
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Optimal LR found: 0.005754399373371567
+┏━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name            ┃ Type                  ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ model           │ ResNet                │ 11.2 M │ train │     0 │
+│ 1 │ val_conf_matrix │ BinaryConfusionMatrix │      0 │ train │     0 │
+│ 2 │ val_recall      │ BinaryRecall          │      0 │ train │     0 │
+│ 3 │ val_precision   │ BinaryPrecision       │      0 │ train │     0 │
+│ 4 │ val_f1          │ BinaryF1Score         │      0 │ train │     0 │
+└───┴─────────────────┴───────────────────────┴────────┴───────┴───────┘
+Trainable params: 10.5 M                                                        
+Non-trainable params: 683 K                                                     
+Total params: 11.2 M                                                            
+Total estimated model params size (MB): 44                                      
+Modules in train mode: 98                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+SLURM auto-requeueing enabled. Setting signal handlers.
+Metric val_f1 improved. New best score: 0.897
+Metric val_f1 improved by 0.057 >= min_delta = 0.0. New best score: 0.953
+Metric val_f1 improved by 0.011 >= min_delta = 0.0. New best score: 0.964
+Metric val_f1 improved by 0.014 >= min_delta = 0.0. New best score: 0.978
+Metric val_f1 improved by 0.001 >= min_delta = 0.0. New best score: 0.979
+Metric val_f1 improved by 0.004 >= min_delta = 0.0. New best score: 0.983
+Monitored metric val_f1 did not improve in the last 5 records. Best score: 0.983. Signaling Trainer to stop.
+Epoch 12/49 ━━━━━━━━━━━━━━━━ 190/190 0:00:19 •        9.97it/s v_num: 1.000     
+                                     0:00:00                   train_loss: 0.032
+                                                               val_loss: 0.043  
+                                                               val_accuracy:    
+                                                               0.983 val_recall:
+                                                               0.982            
+                                                               val_precision:   
+                                                               0.983 val_f1:    
+                                                               0.982            
+[rank: 0] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/trainer/configuration_validator.py:70: You defined a `validation_step` but have no `val_dataloader`. Skipping val loop.
+/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:881: Checkpoint directory /home/nstaehel/IPEO_hurricane_assesment/checkpoints exists and is not empty.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+`weights_only` was not set, defaulting to `False`.
+
+ Starting Experiment: Model=resnet18, Optimizer=adam, Max Epochs=50, Augment Train=True 
+
+Finding best initial lr:   0%|          | 0/100 [00:00<?, ?it/s]Finding best initial lr:   1%|          | 1/100 [00:00<01:01,  1.61it/s]Finding best initial lr:   5%|▌         | 5/100 [00:00<00:11,  8.51it/s]Finding best initial lr:   8%|▊         | 8/100 [00:00<00:07, 12.71it/s]Finding best initial lr:  11%|█         | 11/100 [00:01<00:06, 12.82it/s]Finding best initial lr:  13%|█▎        | 13/100 [00:01<00:06, 14.00it/s]Finding best initial lr:  15%|█▌        | 15/100 [00:01<00:07, 10.72it/s]Finding best initial lr:  17%|█▋        | 17/100 [00:01<00:06, 12.28it/s]Finding best initial lr:  19%|█▉        | 19/100 [00:01<00:08,  9.71it/s]Finding best initial lr:  22%|██▏       | 22/100 [00:02<00:08,  9.08it/s]Finding best initial lr:  25%|██▌       | 25/100 [00:02<00:06, 11.51it/s]Finding best initial lr:  27%|██▋       | 27/100 [00:02<00:07,  9.65it/s]Finding best initial lr:  30%|███       | 30/100 [00:03<00:07,  9.07it/s]Finding best initial lr:  33%|███▎      | 33/100 [00:03<00:05, 11.32it/s]Finding best initial lr:  35%|███▌      | 35/100 [00:03<00:06,  9.57it/s]Finding best initial lr:  38%|███▊      | 38/100 [00:03<00:06,  9.13it/s]Finding best initial lr:  41%|████      | 41/100 [00:03<00:05, 11.45it/s]Finding best initial lr:  43%|████▎     | 43/100 [00:04<00:05,  9.53it/s]Finding best initial lr:  46%|████▌     | 46/100 [00:04<00:05,  9.12it/s]Finding best initial lr:  49%|████▉     | 49/100 [00:04<00:04, 11.53it/s]Finding best initial lr:  51%|█████     | 51/100 [00:05<00:05,  9.55it/s]Finding best initial lr:  54%|█████▍    | 54/100 [00:05<00:05,  9.14it/s]Finding best initial lr:  57%|█████▋    | 57/100 [00:05<00:03, 11.56it/s]Finding best initial lr:  59%|█████▉    | 59/100 [00:05<00:04,  9.56it/s]Finding best initial lr:  62%|██████▏   | 62/100 [00:06<00:04,  9.08it/s]Finding best initial lr:  65%|██████▌   | 65/100 [00:06<00:03, 11.61it/s]Finding best initial lr:  67%|██████▋   | 67/100 [00:06<00:03,  9.55it/s]Finding best initial lr:  70%|███████   | 70/100 [00:07<00:03,  9.13it/s]Finding best initial lr:  73%|███████▎  | 73/100 [00:07<00:02, 11.58it/s]Finding best initial lr:  75%|███████▌  | 75/100 [00:07<00:02,  9.53it/s]Finding best initial lr:  78%|███████▊  | 78/100 [00:07<00:02,  9.19it/s]Finding best initial lr:  81%|████████  | 81/100 [00:07<00:01, 11.54it/s]Finding best initial lr:  83%|████████▎ | 83/100 [00:08<00:01,  9.50it/s]Finding best initial lr:  86%|████████▌ | 86/100 [00:08<00:01,  9.14it/s]Finding best initial lr:  89%|████████▉ | 89/100 [00:08<00:00, 11.56it/s]Finding best initial lr:  91%|█████████ | 91/100 [00:09<00:00,  9.45it/s]Finding best initial lr:  94%|█████████▍| 94/100 [00:09<00:00,  9.21it/s]Finding best initial lr:  97%|█████████▋| 97/100 [00:09<00:00, 11.52it/s]Finding best initial lr:  99%|█████████▉| 99/100 [00:09<00:00,  9.51it/s]`Trainer.fit` stopped: `max_steps=100` reached.
+Finding best initial lr: 100%|██████████| 100/100 [00:09<00:00, 10.01it/s]
+Restoring states from the checkpoint path at /home/nstaehel/IPEO_hurricane_assesment/.lr_find_b289d281-55ed-4f12-b8ff-06117404c6b0.ckpt
+Restored all states from the checkpoint at /home/nstaehel/IPEO_hurricane_assesment/.lr_find_b289d281-55ed-4f12-b8ff-06117404c6b0.ckpt
+Learning rate set to 0.00017378008287493763
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Optimal LR found: 0.00017378008287493763
+┏━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name            ┃ Type                  ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ model           │ ResNet                │ 11.2 M │ train │     0 │
+│ 1 │ val_conf_matrix │ BinaryConfusionMatrix │      0 │ train │     0 │
+│ 2 │ val_recall      │ BinaryRecall          │      0 │ train │     0 │
+│ 3 │ val_precision   │ BinaryPrecision       │      0 │ train │     0 │
+│ 4 │ val_f1          │ BinaryF1Score         │      0 │ train │     0 │
+└───┴─────────────────┴───────────────────────┴────────┴───────┴───────┘
+Trainable params: 10.5 M                                                        
+Non-trainable params: 683 K                                                     
+Total params: 11.2 M                                                            
+Total estimated model params size (MB): 44                                      
+Modules in train mode: 98                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+SLURM auto-requeueing enabled. Setting signal handlers.
+Metric val_f1 improved. New best score: 0.952
+Metric val_f1 improved by 0.026 >= min_delta = 0.0. New best score: 0.978
+Metric val_f1 improved by 0.004 >= min_delta = 0.0. New best score: 0.983
+Metric val_f1 improved by 0.007 >= min_delta = 0.0. New best score: 0.990
+Monitored metric val_f1 did not improve in the last 5 records. Best score: 0.990. Signaling Trainer to stop.
+Epoch 11/49 ━━━━━━━━━━━━━━━━ 190/190 0:00:19 •       10.15it/s v_num: 0.000     
+                                     0:00:00                   train_loss: 0.035
+                                                               val_loss: 0.053  
+                                                               val_accuracy:    
+                                                               0.982 val_recall:
+                                                               0.998            
+                                                               val_precision:   
+                                                               0.967 val_f1:    
+                                                               0.982            
+[rank: 0] Seed set to 42
+
+ Starting Experiment: Model=resnet50, Optimizer=sgd, Max Epochs=50, Augment Train=True 
+
+Downloading: "https://hf.co/torchgeo/resnet50_sentinel2_rgb_moco/resolve/efd9723b59a88e9dc1420dc1e96afb25b0630a3c/resnet50_sentinel2_rgb_moco-2b57ba8b.pth" to /home/nstaehel/.cache/torch/hub/checkpoints/resnet50_sentinel2_rgb_moco-2b57ba8b.pth
+  0%|          | 0.00/90.0M [00:00<?, ?B/s]  0%|          | 128k/90.0M [00:00<02:58, 529kB/s]  7%|▋         | 6.62M/90.0M [00:00<00:03, 25.2MB/s] 16%|█▌        | 14.0M/90.0M [00:00<00:01, 42.9MB/s] 22%|██▏       | 19.5M/90.0M [00:00<00:01, 39.7MB/s] 29%|██▉       | 26.4M/90.0M [00:00<00:01, 48.7MB/s] 37%|███▋      | 33.4M/90.0M [00:00<00:01, 55.8MB/s] 44%|████▍     | 39.4M/90.0M [00:00<00:01, 48.6MB/s] 50%|█████     | 45.0M/90.0M [00:01<00:00, 49.0MB/s] 56%|█████▌    | 50.1M/90.0M [00:01<00:01, 28.9MB/s] 63%|██████▎   | 56.2M/90.0M [00:01<00:01, 31.5MB/s] 67%|██████▋   | 60.1M/90.0M [00:01<00:00, 32.7MB/s] 71%|███████   | 64.0M/90.0M [00:02<00:01, 25.1MB/s] 78%|███████▊  | 70.1M/90.0M [00:02<00:00, 29.9MB/s] 82%|████████▏ | 73.6M/90.0M [00:02<00:00, 27.5MB/s] 85%|████████▌ | 76.8M/90.0M [00:02<00:00, 20.7MB/s] 93%|█████████▎| 83.2M/90.0M [00:02<00:00, 28.6MB/s] 97%|█████████▋| 86.9M/90.0M [00:02<00:00, 23.5MB/s]100%|█████████▉| 89.9M/90.0M [00:04<00:00, 6.82MB/s]100%|██████████| 90.0M/90.0M [00:04<00:00, 20.4MB/s]
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/trainer/configuration_validator.py:70: You defined a `validation_step` but have no `val_dataloader`. Skipping val loop.
+/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:881: Checkpoint directory /home/nstaehel/IPEO_hurricane_assesment/checkpoints exists and is not empty.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+`weights_only` was not set, defaulting to `False`.
+Finding best initial lr:   0%|          | 0/100 [00:00<?, ?it/s]Finding best initial lr:   1%|          | 1/100 [00:00<00:39,  2.53it/s]Finding best initial lr:   3%|▎         | 3/100 [00:00<00:14,  6.50it/s]Finding best initial lr:   4%|▍         | 4/100 [00:00<00:13,  7.27it/s]Finding best initial lr:   5%|▌         | 5/100 [00:00<00:12,  7.89it/s]Finding best initial lr:   6%|▌         | 6/100 [00:00<00:11,  8.34it/s]Finding best initial lr:   7%|▋         | 7/100 [00:00<00:10,  8.65it/s]Finding best initial lr:   8%|▊         | 8/100 [00:01<00:10,  8.90it/s]Finding best initial lr:   9%|▉         | 9/100 [00:01<00:10,  9.07it/s]Finding best initial lr:  10%|█         | 10/100 [00:01<00:09,  9.18it/s]Finding best initial lr:  11%|█         | 11/100 [00:01<00:09,  9.26it/s]Finding best initial lr:  12%|█▏        | 12/100 [00:01<00:09,  9.33it/s]Finding best initial lr:  13%|█▎        | 13/100 [00:01<00:09,  9.36it/s]Finding best initial lr:  14%|█▍        | 14/100 [00:01<00:09,  9.39it/s]Finding best initial lr:  15%|█▌        | 15/100 [00:01<00:09,  9.41it/s]Finding best initial lr:  16%|█▌        | 16/100 [00:01<00:08,  9.43it/s]Finding best initial lr:  17%|█▋        | 17/100 [00:02<00:08,  9.41it/s]Finding best initial lr:  18%|█▊        | 18/100 [00:02<00:08,  9.45it/s]Finding best initial lr:  19%|█▉        | 19/100 [00:02<00:08,  9.46it/s]Finding best initial lr:  20%|██        | 20/100 [00:02<00:08,  9.46it/s]Finding best initial lr:  21%|██        | 21/100 [00:02<00:08,  9.47it/s]Finding best initial lr:  22%|██▏       | 22/100 [00:02<00:08,  9.46it/s]Finding best initial lr:  23%|██▎       | 23/100 [00:02<00:08,  9.46it/s]Finding best initial lr:  24%|██▍       | 24/100 [00:02<00:08,  9.46it/s]Finding best initial lr:  25%|██▌       | 25/100 [00:02<00:07,  9.46it/s]Finding best initial lr:  26%|██▌       | 26/100 [00:02<00:07,  9.46it/s]Finding best initial lr:  27%|██▋       | 27/100 [00:03<00:07,  9.46it/s]Finding best initial lr:  28%|██▊       | 28/100 [00:03<00:07,  9.43it/s]Finding best initial lr:  29%|██▉       | 29/100 [00:03<00:07,  9.46it/s]Finding best initial lr:  30%|███       | 30/100 [00:03<00:07,  9.45it/s]Finding best initial lr:  31%|███       | 31/100 [00:03<00:07,  9.46it/s]Finding best initial lr:  32%|███▏      | 32/100 [00:03<00:07,  9.47it/s]Finding best initial lr:  33%|███▎      | 33/100 [00:03<00:07,  9.46it/s]Finding best initial lr:  34%|███▍      | 34/100 [00:03<00:06,  9.46it/s]Finding best initial lr:  35%|███▌      | 35/100 [00:03<00:06,  9.45it/s]Finding best initial lr:  36%|███▌      | 36/100 [00:04<00:06,  9.47it/s]Finding best initial lr:  37%|███▋      | 37/100 [00:04<00:06,  9.45it/s]Finding best initial lr:  38%|███▊      | 38/100 [00:04<00:06,  9.47it/s]Finding best initial lr:  39%|███▉      | 39/100 [00:04<00:06,  9.47it/s]Finding best initial lr:  40%|████      | 40/100 [00:04<00:06,  9.47it/s]Finding best initial lr:  41%|████      | 41/100 [00:04<00:06,  9.42it/s]Finding best initial lr:  42%|████▏     | 42/100 [00:04<00:06,  9.48it/s]Finding best initial lr:  43%|████▎     | 43/100 [00:04<00:06,  9.47it/s]Finding best initial lr:  44%|████▍     | 44/100 [00:04<00:05,  9.47it/s]Finding best initial lr:  45%|████▌     | 45/100 [00:04<00:05,  9.47it/s]Finding best initial lr:  46%|████▌     | 46/100 [00:05<00:05,  9.47it/s]Finding best initial lr:  47%|████▋     | 47/100 [00:05<00:05,  9.46it/s]Finding best initial lr:  48%|████▊     | 48/100 [00:05<00:05,  9.46it/s]Finding best initial lr:  49%|████▉     | 49/100 [00:05<00:05,  9.46it/s]Finding best initial lr:  50%|█████     | 50/100 [00:05<00:05,  9.46it/s]Finding best initial lr:  51%|█████     | 51/100 [00:05<00:05,  9.47it/s]Finding best initial lr:  52%|█████▏    | 52/100 [00:05<00:05,  9.46it/s]Finding best initial lr:  53%|█████▎    | 53/100 [00:05<00:04,  9.46it/s]Finding best initial lr:  54%|█████▍    | 54/100 [00:05<00:04,  9.47it/s]Finding best initial lr:  55%|█████▌    | 55/100 [00:06<00:04,  9.47it/s]Finding best initial lr:  56%|█████▌    | 56/100 [00:06<00:04,  9.47it/s]Finding best initial lr:  57%|█████▋    | 57/100 [00:06<00:04,  9.46it/s]Finding best initial lr:  58%|█████▊    | 58/100 [00:06<00:04,  9.47it/s]Finding best initial lr:  59%|█████▉    | 59/100 [00:06<00:04,  9.46it/s]Finding best initial lr:  60%|██████    | 60/100 [00:06<00:04,  9.46it/s]Finding best initial lr:  61%|██████    | 61/100 [00:06<00:04,  9.44it/s]Finding best initial lr:  62%|██████▏   | 62/100 [00:06<00:04,  9.46it/s]Finding best initial lr:  63%|██████▎   | 63/100 [00:06<00:03,  9.47it/s]Finding best initial lr:  64%|██████▍   | 64/100 [00:06<00:03,  9.44it/s]Finding best initial lr:  65%|██████▌   | 65/100 [00:07<00:03,  9.46it/s]Finding best initial lr:  66%|██████▌   | 66/100 [00:07<00:03,  9.46it/s]Finding best initial lr:  67%|██████▋   | 67/100 [00:07<00:03,  9.47it/s]Finding best initial lr:  68%|██████▊   | 68/100 [00:07<00:03,  9.46it/s]Finding best initial lr:  69%|██████▉   | 69/100 [00:07<00:03,  9.47it/s]Finding best initial lr:  70%|███████   | 70/100 [00:07<00:03,  9.47it/s]Finding best initial lr:  71%|███████   | 71/100 [00:07<00:03,  9.46it/s]Finding best initial lr:  72%|███████▏  | 72/100 [00:07<00:02,  9.46it/s]Finding best initial lr:  73%|███████▎  | 73/100 [00:07<00:02,  9.46it/s]Finding best initial lr:  74%|███████▍  | 74/100 [00:08<00:02,  9.46it/s]Finding best initial lr:  75%|███████▌  | 75/100 [00:08<00:02,  9.46it/s]Finding best initial lr:  76%|███████▌  | 76/100 [00:08<00:02,  9.47it/s]Finding best initial lr:  77%|███████▋  | 77/100 [00:08<00:02,  9.45it/s]Finding best initial lr:  78%|███████▊  | 78/100 [00:08<00:02,  9.47it/s]Finding best initial lr:  79%|███████▉  | 79/100 [00:08<00:02,  9.47it/s]Finding best initial lr:  80%|████████  | 80/100 [00:08<00:02,  9.47it/s]Finding best initial lr:  81%|████████  | 81/100 [00:08<00:02,  9.46it/s]Finding best initial lr:  82%|████████▏ | 82/100 [00:08<00:01,  9.47it/s]Finding best initial lr:  83%|████████▎ | 83/100 [00:08<00:01,  9.47it/s]Finding best initial lr:  84%|████████▍ | 84/100 [00:09<00:01,  9.47it/s]Finding best initial lr:  85%|████████▌ | 85/100 [00:09<00:01,  9.47it/s]Finding best initial lr:  86%|████████▌ | 86/100 [00:09<00:01,  9.44it/s]Finding best initial lr:  87%|████████▋ | 87/100 [00:09<00:01,  9.47it/s]Finding best initial lr:  88%|████████▊ | 88/100 [00:09<00:01,  9.47it/s]Finding best initial lr:  89%|████████▉ | 89/100 [00:09<00:01,  9.46it/s]Finding best initial lr:  90%|█████████ | 90/100 [00:09<00:01,  9.44it/s]Finding best initial lr:  91%|█████████ | 91/100 [00:09<00:00,  9.47it/s]Finding best initial lr:  92%|█████████▏| 92/100 [00:09<00:00,  9.47it/s]Finding best initial lr:  93%|█████████▎| 93/100 [00:10<00:00,  9.47it/s]Finding best initial lr:  94%|█████████▍| 94/100 [00:10<00:00,  9.47it/s]Finding best initial lr:  95%|█████████▌| 95/100 [00:10<00:00,  9.46it/s]Finding best initial lr:  96%|█████████▌| 96/100 [00:10<00:00,  9.47it/s]Finding best initial lr:  97%|█████████▋| 97/100 [00:10<00:00,  9.46it/s]Finding best initial lr:  98%|█████████▊| 98/100 [00:10<00:00,  9.47it/s]Finding best initial lr:  99%|█████████▉| 99/100 [00:10<00:00,  9.45it/s]Finding best initial lr: 100%|██████████| 100/100 [00:10<00:00,  9.46it/s]`Trainer.fit` stopped: `max_steps=100` reached.
+Finding best initial lr: 100%|██████████| 100/100 [00:10<00:00,  9.19it/s]
+Restoring states from the checkpoint path at /home/nstaehel/IPEO_hurricane_assesment/.lr_find_7ffa9cb0-6a95-42e5-83aa-3d646e6672b2.ckpt
+Restored all states from the checkpoint at /home/nstaehel/IPEO_hurricane_assesment/.lr_find_7ffa9cb0-6a95-42e5-83aa-3d646e6672b2.ckpt
+Learning rate set to 0.005754399373371567
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Optimal LR found: 0.005754399373371567
+┏━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name            ┃ Type                  ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ model           │ ResNet                │ 23.5 M │ train │     0 │
+│ 1 │ val_conf_matrix │ BinaryConfusionMatrix │      0 │ train │     0 │
+│ 2 │ val_recall      │ BinaryRecall          │      0 │ train │     0 │
+│ 3 │ val_precision   │ BinaryPrecision       │      0 │ train │     0 │
+│ 4 │ val_f1          │ BinaryF1Score         │      0 │ train │     0 │
+└───┴─────────────────┴───────────────────────┴────────┴───────┴───────┘
+Trainable params: 22.1 M                                                        
+Non-trainable params: 1.4 M                                                     
+Total params: 23.5 M                                                            
+Total estimated model params size (MB): 94                                      
+Modules in train mode: 221                                                      
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+SLURM auto-requeueing enabled. Setting signal handlers.
+Metric val_f1 improved. New best score: 0.911
+Metric val_f1 improved by 0.019 >= min_delta = 0.0. New best score: 0.931
+Metric val_f1 improved by 0.044 >= min_delta = 0.0. New best score: 0.975
+Metric val_f1 improved by 0.002 >= min_delta = 0.0. New best score: 0.977
+Metric val_f1 improved by 0.000 >= min_delta = 0.0. New best score: 0.977
+Monitored metric val_f1 did not improve in the last 5 records. Best score: 0.977. Signaling Trainer to stop.
+Epoch 14/49 ━━━━━━━━━━━━━━━━ 190/190 0:00:20 •        9.43it/s v_num: 0.000     
+                                     0:00:00                   train_loss: 0.010
+                                                               val_loss: 0.103  
+                                                               val_accuracy:    
+                                                               0.970 val_recall:
+                                                               0.995            
+                                                               val_precision:   
+                                                               0.947 val_f1:    
+                                                               0.970            
+[rank: 0] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/trainer/configuration_validator.py:70: You defined a `validation_step` but have no `val_dataloader`. Skipping val loop.
+/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:881: Checkpoint directory /home/nstaehel/IPEO_hurricane_assesment/checkpoints exists and is not empty.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+`weights_only` was not set, defaulting to `False`.
+
+ Starting Experiment: Model=resnet50, Optimizer=adam, Max Epochs=50, Augment Train=True 
+
+Finding best initial lr:   0%|          | 0/100 [00:00<?, ?it/s]Finding best initial lr:   2%|▏         | 2/100 [00:00<00:06, 16.13it/s]Finding best initial lr:   4%|▍         | 4/100 [00:00<00:08, 11.30it/s]Finding best initial lr:   6%|▌         | 6/100 [00:00<00:09, 10.30it/s]Finding best initial lr:   8%|▊         | 8/100 [00:00<00:09,  9.88it/s]Finding best initial lr:  10%|█         | 10/100 [00:00<00:09,  9.69it/s]Finding best initial lr:  11%|█         | 11/100 [00:01<00:09,  9.61it/s]Finding best initial lr:  12%|█▏        | 12/100 [00:01<00:09,  9.52it/s]Finding best initial lr:  13%|█▎        | 13/100 [00:01<00:09,  9.50it/s]Finding best initial lr:  14%|█▍        | 14/100 [00:01<00:09,  9.46it/s]Finding best initial lr:  15%|█▌        | 15/100 [00:01<00:09,  9.42it/s]Finding best initial lr:  16%|█▌        | 16/100 [00:01<00:08,  9.35it/s]Finding best initial lr:  17%|█▋        | 17/100 [00:01<00:08,  9.38it/s]Finding best initial lr:  18%|█▊        | 18/100 [00:01<00:08,  9.37it/s]Finding best initial lr:  19%|█▉        | 19/100 [00:01<00:08,  9.36it/s]Finding best initial lr:  20%|██        | 20/100 [00:02<00:08,  9.35it/s]Finding best initial lr:  21%|██        | 21/100 [00:02<00:08,  9.34it/s]Finding best initial lr:  22%|██▏       | 22/100 [00:02<00:08,  9.34it/s]Finding best initial lr:  23%|██▎       | 23/100 [00:02<00:08,  9.33it/s]Finding best initial lr:  24%|██▍       | 24/100 [00:02<00:08,  9.33it/s]Finding best initial lr:  25%|██▌       | 25/100 [00:02<00:08,  9.33it/s]Finding best initial lr:  26%|██▌       | 26/100 [00:02<00:07,  9.32it/s]Finding best initial lr:  27%|██▋       | 27/100 [00:02<00:07,  9.31it/s]Finding best initial lr:  28%|██▊       | 28/100 [00:02<00:07,  9.34it/s]Finding best initial lr:  29%|██▉       | 29/100 [00:03<00:07,  9.34it/s]Finding best initial lr:  30%|███       | 30/100 [00:03<00:07,  9.34it/s]Finding best initial lr:  31%|███       | 31/100 [00:03<00:07,  9.31it/s]Finding best initial lr:  32%|███▏      | 32/100 [00:03<00:07,  9.34it/s]Finding best initial lr:  33%|███▎      | 33/100 [00:03<00:07,  9.34it/s]Finding best initial lr:  34%|███▍      | 34/100 [00:03<00:07,  9.33it/s]Finding best initial lr:  35%|███▌      | 35/100 [00:03<00:06,  9.30it/s]Finding best initial lr:  36%|███▌      | 36/100 [00:03<00:06,  9.33it/s]Finding best initial lr:  37%|███▋      | 37/100 [00:03<00:06,  9.33it/s]Finding best initial lr:  38%|███▊      | 38/100 [00:03<00:06,  9.33it/s]Finding best initial lr:  39%|███▉      | 39/100 [00:04<00:06,  9.33it/s]Finding best initial lr:  40%|████      | 40/100 [00:04<00:06,  9.33it/s]Finding best initial lr:  41%|████      | 41/100 [00:04<00:06,  9.33it/s]Finding best initial lr:  42%|████▏     | 42/100 [00:04<00:06,  9.32it/s]Finding best initial lr:  43%|████▎     | 43/100 [00:04<00:06,  9.33it/s]Finding best initial lr:  44%|████▍     | 44/100 [00:04<00:06,  9.33it/s]Finding best initial lr:  45%|████▌     | 45/100 [00:04<00:05,  9.33it/s]Finding best initial lr:  46%|████▌     | 46/100 [00:04<00:05,  9.31it/s]Finding best initial lr:  47%|████▋     | 47/100 [00:04<00:05,  9.33it/s]Finding best initial lr:  48%|████▊     | 48/100 [00:05<00:05,  9.33it/s]Finding best initial lr:  49%|████▉     | 49/100 [00:05<00:05,  9.33it/s]Finding best initial lr:  50%|█████     | 50/100 [00:05<00:05,  9.32it/s]Finding best initial lr:  51%|█████     | 51/100 [00:05<00:05,  9.32it/s]Finding best initial lr:  52%|█████▏    | 52/100 [00:05<00:05,  9.32it/s]Finding best initial lr:  53%|█████▎    | 53/100 [00:05<00:05,  9.32it/s]Finding best initial lr:  54%|█████▍    | 54/100 [00:05<00:04,  9.28it/s]Finding best initial lr:  55%|█████▌    | 55/100 [00:05<00:04,  9.34it/s]Finding best initial lr:  56%|█████▌    | 56/100 [00:05<00:04,  9.33it/s]Finding best initial lr:  57%|█████▋    | 57/100 [00:06<00:04,  9.31it/s]Finding best initial lr:  58%|█████▊    | 58/100 [00:06<00:04,  9.34it/s]Finding best initial lr:  59%|█████▉    | 59/100 [00:06<00:04,  9.33it/s]Finding best initial lr:  60%|██████    | 60/100 [00:06<00:04,  9.33it/s]Finding best initial lr:  61%|██████    | 61/100 [00:06<00:04,  9.33it/s]Finding best initial lr:  62%|██████▏   | 62/100 [00:06<00:04,  9.33it/s]Finding best initial lr:  63%|██████▎   | 63/100 [00:06<00:03,  9.33it/s]Finding best initial lr:  64%|██████▍   | 64/100 [00:06<00:03,  9.32it/s]Finding best initial lr:  65%|██████▌   | 65/100 [00:06<00:03,  9.32it/s]Finding best initial lr:  66%|██████▌   | 66/100 [00:06<00:03,  9.32it/s]Finding best initial lr:  67%|██████▋   | 67/100 [00:07<00:03,  9.32it/s]Finding best initial lr:  68%|██████▊   | 68/100 [00:07<00:03,  9.33it/s]Finding best initial lr:  69%|██████▉   | 69/100 [00:07<00:03,  9.33it/s]Finding best initial lr:  70%|███████   | 70/100 [00:07<00:03,  9.33it/s]Finding best initial lr:  71%|███████   | 71/100 [00:07<00:03,  9.33it/s]Finding best initial lr:  72%|███████▏  | 72/100 [00:07<00:03,  9.33it/s]Finding best initial lr:  73%|███████▎  | 73/100 [00:07<00:02,  9.33it/s]Finding best initial lr:  74%|███████▍  | 74/100 [00:07<00:02,  9.33it/s]Finding best initial lr:  75%|███████▌  | 75/100 [00:07<00:02,  9.33it/s]Finding best initial lr:  76%|███████▌  | 76/100 [00:08<00:02,  9.33it/s]Finding best initial lr:  77%|███████▋  | 77/100 [00:08<00:02,  9.32it/s]Finding best initial lr:  78%|███████▊  | 78/100 [00:08<00:02,  9.32it/s]Finding best initial lr:  79%|███████▉  | 79/100 [00:08<00:02,  9.32it/s]Finding best initial lr:  80%|████████  | 80/100 [00:08<00:02,  9.32it/s]Finding best initial lr:  81%|████████  | 81/100 [00:08<00:02,  9.33it/s]Finding best initial lr:  82%|████████▏ | 82/100 [00:08<00:01,  9.32it/s]Finding best initial lr:  83%|████████▎ | 83/100 [00:08<00:01,  9.33it/s]Finding best initial lr:  84%|████████▍ | 84/100 [00:08<00:01,  9.32it/s]Finding best initial lr:  85%|████████▌ | 85/100 [00:09<00:01,  9.32it/s]Finding best initial lr:  86%|████████▌ | 86/100 [00:09<00:01,  9.32it/s]Finding best initial lr:  87%|████████▋ | 87/100 [00:09<00:01,  9.32it/s]Finding best initial lr:  88%|████████▊ | 88/100 [00:09<00:01,  9.32it/s]Finding best initial lr:  89%|████████▉ | 89/100 [00:09<00:01,  9.33it/s]Finding best initial lr:  90%|█████████ | 90/100 [00:09<00:01,  9.33it/s]Finding best initial lr:  91%|█████████ | 91/100 [00:09<00:00,  9.32it/s]Finding best initial lr:  92%|█████████▏| 92/100 [00:09<00:00,  9.32it/s]Finding best initial lr:  93%|█████████▎| 93/100 [00:09<00:00,  9.32it/s]Finding best initial lr:  94%|█████████▍| 94/100 [00:09<00:00,  9.34it/s]Finding best initial lr:  95%|█████████▌| 95/100 [00:10<00:00,  9.34it/s]Finding best initial lr:  96%|█████████▌| 96/100 [00:10<00:00,  9.34it/s]Finding best initial lr:  97%|█████████▋| 97/100 [00:10<00:00,  9.34it/s]Finding best initial lr:  97%|█████████▋| 97/100 [00:10<00:00,  9.33it/s]
+LR finder stopped early after 97 steps due to diverging loss.
+Restoring states from the checkpoint path at /home/nstaehel/IPEO_hurricane_assesment/.lr_find_1cb2e905-2a22-43ad-a853-13f53a1ecb9a.ckpt
+Restored all states from the checkpoint at /home/nstaehel/IPEO_hurricane_assesment/.lr_find_1cb2e905-2a22-43ad-a853-13f53a1ecb9a.ckpt
+Learning rate set to 0.0002089296130854041
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Optimal LR found: 0.0002089296130854041
+┏━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name            ┃ Type                  ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ model           │ ResNet                │ 23.5 M │ train │     0 │
+│ 1 │ val_conf_matrix │ BinaryConfusionMatrix │      0 │ train │     0 │
+│ 2 │ val_recall      │ BinaryRecall          │      0 │ train │     0 │
+│ 3 │ val_precision   │ BinaryPrecision       │      0 │ train │     0 │
+│ 4 │ val_f1          │ BinaryF1Score         │      0 │ train │     0 │
+└───┴─────────────────┴───────────────────────┴────────┴───────┴───────┘
+Trainable params: 22.1 M                                                        
+Non-trainable params: 1.4 M                                                     
+Total params: 23.5 M                                                            
+Total estimated model params size (MB): 94                                      
+Modules in train mode: 221                                                      
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+SLURM auto-requeueing enabled. Setting signal handlers.
+Metric val_f1 improved. New best score: 0.956
+Metric val_f1 improved by 0.027 >= min_delta = 0.0. New best score: 0.983
+Monitored metric val_f1 did not improve in the last 5 records. Best score: 0.983. Signaling Trainer to stop.
+Epoch 8/49 ━━━━━━━━━━━━━━━━ 190/190 0:00:20 • 0:00:00 9.29it/s v_num: 0.000     
+                                                               train_loss: 0.041
+                                                               val_loss: 0.063  
+                                                               val_accuracy:    
+                                                               0.979 val_recall:
+                                                               0.993            
+                                                               val_precision:   
+                                                               0.966 val_f1:    
+                                                               0.979            
+[rank: 0] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/trainer/configuration_validator.py:70: You defined a `validation_step` but have no `val_dataloader`. Skipping val loop.
+/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:881: Checkpoint directory /home/nstaehel/IPEO_hurricane_assesment/checkpoints exists and is not empty.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+`weights_only` was not set, defaulting to `False`.
+
+ Starting Experiment: Model=alexnet, Optimizer=sgd, Max Epochs=50, Augment Train=True 
+
+Finding best initial lr:   0%|          | 0/100 [00:00<?, ?it/s]Finding best initial lr:   1%|          | 1/100 [00:01<01:56,  1.18s/it]Finding best initial lr:  10%|█         | 10/100 [00:01<00:11,  7.64it/s]Finding best initial lr:  14%|█▍        | 14/100 [00:02<00:10,  8.23it/s]Finding best initial lr:  18%|█▊        | 18/100 [00:02<00:09,  8.55it/s]Finding best initial lr:  22%|██▏       | 22/100 [00:02<00:08,  8.79it/s]Finding best initial lr:  26%|██▌       | 26/100 [00:03<00:08,  8.97it/s]Finding best initial lr:  30%|███       | 30/100 [00:03<00:07,  9.03it/s]Finding best initial lr:  34%|███▍      | 34/100 [00:04<00:07,  9.15it/s]Finding best initial lr:  38%|███▊      | 38/100 [00:04<00:06,  9.20it/s]Finding best initial lr:  42%|████▏     | 42/100 [00:05<00:06,  9.23it/s]Finding best initial lr:  46%|████▌     | 46/100 [00:05<00:05,  9.27it/s]Finding best initial lr:  50%|█████     | 50/100 [00:05<00:05,  9.32it/s]Finding best initial lr:  54%|█████▍    | 54/100 [00:06<00:04,  9.32it/s]Finding best initial lr:  58%|█████▊    | 58/100 [00:06<00:04,  9.31it/s]Finding best initial lr:  62%|██████▏   | 62/100 [00:07<00:04,  9.36it/s]Finding best initial lr:  66%|██████▌   | 66/100 [00:07<00:03,  9.39it/s]Finding best initial lr:  70%|███████   | 70/100 [00:08<00:03,  9.37it/s]Finding best initial lr:  74%|███████▍  | 74/100 [00:08<00:02,  9.36it/s]Finding best initial lr:  78%|███████▊  | 78/100 [00:08<00:02,  9.37it/s]Finding best initial lr:  82%|████████▏ | 82/100 [00:09<00:01,  9.39it/s]Finding best initial lr:  86%|████████▌ | 86/100 [00:09<00:01,  9.41it/s]Finding best initial lr:  90%|█████████ | 90/100 [00:10<00:01,  9.43it/s]Finding best initial lr:  91%|█████████ | 91/100 [00:10<00:01,  8.94it/s]
+LR finder stopped early after 91 steps due to diverging loss.
+Restoring states from the checkpoint path at /home/nstaehel/IPEO_hurricane_assesment/.lr_find_d351bfef-f13b-43c6-9c7f-c93cf0745bf5.ckpt
+Restored all states from the checkpoint at /home/nstaehel/IPEO_hurricane_assesment/.lr_find_d351bfef-f13b-43c6-9c7f-c93cf0745bf5.ckpt
+Learning rate set to 7.585775750291837e-08
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Optimal LR found: 7.585775750291837e-08
+┏━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name            ┃ Type                  ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ model           │ AlexNet               │ 57.0 M │ train │     0 │
+│ 1 │ val_conf_matrix │ BinaryConfusionMatrix │      0 │ train │     0 │
+│ 2 │ val_recall      │ BinaryRecall          │      0 │ train │     0 │
+│ 3 │ val_precision   │ BinaryPrecision       │      0 │ train │     0 │
+│ 4 │ val_f1          │ BinaryF1Score         │      0 │ train │     0 │
+└───┴─────────────────┴───────────────────────┴────────┴───────┴───────┘
+Trainable params: 54.5 M                                                        
+Non-trainable params: 2.5 M                                                     
+Total params: 57.0 M                                                            
+Total estimated model params size (MB): 228                                     
+Modules in train mode: 28                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+SLURM auto-requeueing enabled. Setting signal handlers.
+Metric val_f1 improved. New best score: 0.648
+Metric val_f1 improved by 0.001 >= min_delta = 0.0. New best score: 0.649
+Metric val_f1 improved by 0.002 >= min_delta = 0.0. New best score: 0.651
+Metric val_f1 improved by 0.003 >= min_delta = 0.0. New best score: 0.655
+Metric val_f1 improved by 0.001 >= min_delta = 0.0. New best score: 0.655
+Metric val_f1 improved by 0.002 >= min_delta = 0.0. New best score: 0.657
+Metric val_f1 improved by 0.000 >= min_delta = 0.0. New best score: 0.658
+Metric val_f1 improved by 0.000 >= min_delta = 0.0. New best score: 0.658
+Metric val_f1 improved by 0.001 >= min_delta = 0.0. New best score: 0.659
+Metric val_f1 improved by 0.004 >= min_delta = 0.0. New best score: 0.663
+Metric val_f1 improved by 0.002 >= min_delta = 0.0. New best score: 0.665
+Metric val_f1 improved by 0.002 >= min_delta = 0.0. New best score: 0.667
+Metric val_f1 improved by 0.001 >= min_delta = 0.0. New best score: 0.668
+Metric val_f1 improved by 0.000 >= min_delta = 0.0. New best score: 0.668
+Metric val_f1 improved by 0.003 >= min_delta = 0.0. New best score: 0.671
+Metric val_f1 improved by 0.004 >= min_delta = 0.0. New best score: 0.675
+Metric val_f1 improved by 0.004 >= min_delta = 0.0. New best score: 0.679
+Metric val_f1 improved by 0.002 >= min_delta = 0.0. New best score: 0.681
+Metric val_f1 improved by 0.004 >= min_delta = 0.0. New best score: 0.685
+Metric val_f1 improved by 0.004 >= min_delta = 0.0. New best score: 0.688
+Metric val_f1 improved by 0.005 >= min_delta = 0.0. New best score: 0.693
+Metric val_f1 improved by 0.003 >= min_delta = 0.0. New best score: 0.696
+Metric val_f1 improved by 0.003 >= min_delta = 0.0. New best score: 0.699
+Metric val_f1 improved by 0.004 >= min_delta = 0.0. New best score: 0.703
+Metric val_f1 improved by 0.001 >= min_delta = 0.0. New best score: 0.704
+Metric val_f1 improved by 0.003 >= min_delta = 0.0. New best score: 0.708
+Metric val_f1 improved by 0.004 >= min_delta = 0.0. New best score: 0.711
+Metric val_f1 improved by 0.003 >= min_delta = 0.0. New best score: 0.714
+Metric val_f1 improved by 0.005 >= min_delta = 0.0. New best score: 0.719
+Metric val_f1 improved by 0.005 >= min_delta = 0.0. New best score: 0.724
+Metric val_f1 improved by 0.005 >= min_delta = 0.0. New best score: 0.729
+Metric val_f1 improved by 0.001 >= min_delta = 0.0. New best score: 0.730
+Metric val_f1 improved by 0.003 >= min_delta = 0.0. New best score: 0.733
+Metric val_f1 improved by 0.001 >= min_delta = 0.0. New best score: 0.735
+Metric val_f1 improved by 0.004 >= min_delta = 0.0. New best score: 0.738
+Metric val_f1 improved by 0.001 >= min_delta = 0.0. New best score: 0.739
+Metric val_f1 improved by 0.003 >= min_delta = 0.0. New best score: 0.742
+Metric val_f1 improved by 0.001 >= min_delta = 0.0. New best score: 0.743
+Metric val_f1 improved by 0.001 >= min_delta = 0.0. New best score: 0.744
+Metric val_f1 improved by 0.003 >= min_delta = 0.0. New best score: 0.747
+Metric val_f1 improved by 0.002 >= min_delta = 0.0. New best score: 0.750
+Metric val_f1 improved by 0.002 >= min_delta = 0.0. New best score: 0.752
+Metric val_f1 improved by 0.003 >= min_delta = 0.0. New best score: 0.755
+Metric val_f1 improved by 0.000 >= min_delta = 0.0. New best score: 0.755
+Metric val_f1 improved by 0.003 >= min_delta = 0.0. New best score: 0.758
+Metric val_f1 improved by 0.005 >= min_delta = 0.0. New best score: 0.762
+Metric val_f1 improved by 0.002 >= min_delta = 0.0. New best score: 0.764
+Metric val_f1 improved by 0.002 >= min_delta = 0.0. New best score: 0.766
+Metric val_f1 improved by 0.001 >= min_delta = 0.0. New best score: 0.767
+Metric val_f1 improved by 0.003 >= min_delta = 0.0. New best score: 0.770
+`Trainer.fit` stopped: `max_epochs=50` reached.
+Epoch 49/49 ━━━━━━━━━━━━━━━━ 190/190 0:00:19 •       10.14it/s v_num: 0.000     
+                                     0:00:00                   train_loss: 0.512
+                                                               val_loss: 0.552  
+                                                               val_accuracy:    
+                                                               0.756 val_recall:
+                                                               0.819            
+                                                               val_precision:   
+                                                               0.727 val_f1:    
+                                                               0.770            
+[rank: 0] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/trainer/configuration_validator.py:70: You defined a `validation_step` but have no `val_dataloader`. Skipping val loop.
+/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:881: Checkpoint directory /home/nstaehel/IPEO_hurricane_assesment/checkpoints exists and is not empty.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+`weights_only` was not set, defaulting to `False`.
+
+ Starting Experiment: Model=alexnet, Optimizer=adam, Max Epochs=50, Augment Train=True 
+
+Finding best initial lr:   0%|          | 0/100 [00:00<?, ?it/s]Finding best initial lr:   5%|▌         | 5/100 [00:00<00:08, 11.53it/s]Finding best initial lr:   9%|▉         | 9/100 [00:00<00:08, 10.53it/s]Finding best initial lr:  13%|█▎        | 13/100 [00:01<00:08, 10.20it/s]Finding best initial lr:  17%|█▋        | 17/100 [00:01<00:08, 10.02it/s]Finding best initial lr:  21%|██        | 21/100 [00:02<00:07,  9.94it/s]Finding best initial lr:  25%|██▌       | 25/100 [00:02<00:07,  9.88it/s]Finding best initial lr:  29%|██▉       | 29/100 [00:02<00:07,  9.77it/s]Finding best initial lr:  33%|███▎      | 33/100 [00:03<00:06,  9.74it/s]Finding best initial lr:  37%|███▋      | 37/100 [00:03<00:06,  9.74it/s]Finding best initial lr:  41%|████      | 41/100 [00:04<00:06,  9.69it/s]Finding best initial lr:  45%|████▌     | 45/100 [00:04<00:05,  9.68it/s]Finding best initial lr:  49%|████▉     | 49/100 [00:04<00:05,  9.73it/s]Finding best initial lr:  53%|█████▎    | 53/100 [00:05<00:04,  9.70it/s]Finding best initial lr:  57%|█████▋    | 57/100 [00:05<00:04,  9.71it/s]Finding best initial lr:  61%|██████    | 61/100 [00:06<00:04,  9.73it/s]Finding best initial lr:  65%|██████▌   | 65/100 [00:06<00:03,  9.75it/s]Finding best initial lr:  69%|██████▉   | 69/100 [00:07<00:03,  9.71it/s]Finding best initial lr:  73%|███████▎  | 73/100 [00:07<00:02,  9.70it/s]Finding best initial lr:  73%|███████▎  | 73/100 [00:07<00:02,  9.81it/s]
+LR finder stopped early after 73 steps due to diverging loss.
+Restoring states from the checkpoint path at /home/nstaehel/IPEO_hurricane_assesment/.lr_find_0c54053d-08b5-4ede-91a4-55b7e3319a43.ckpt
+Restored all states from the checkpoint at /home/nstaehel/IPEO_hurricane_assesment/.lr_find_0c54053d-08b5-4ede-91a4-55b7e3319a43.ckpt
+Learning rate set to 7.585775750291837e-08
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+Optimal LR found: 7.585775750291837e-08
+┏━━━┳━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━┳━━━━━━━┳━━━━━━━┓
+┃   ┃ Name            ┃ Type                  ┃ Params ┃ Mode  ┃ FLOPs ┃
+┡━━━╇━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━╇━━━━━━━╇━━━━━━━┩
+│ 0 │ model           │ AlexNet               │ 57.0 M │ train │     0 │
+│ 1 │ val_conf_matrix │ BinaryConfusionMatrix │      0 │ train │     0 │
+│ 2 │ val_recall      │ BinaryRecall          │      0 │ train │     0 │
+│ 3 │ val_precision   │ BinaryPrecision       │      0 │ train │     0 │
+│ 4 │ val_f1          │ BinaryF1Score         │      0 │ train │     0 │
+└───┴─────────────────┴───────────────────────┴────────┴───────┴───────┘
+Trainable params: 54.5 M                                                        
+Non-trainable params: 2.5 M                                                     
+Total params: 57.0 M                                                            
+Total estimated model params size (MB): 228                                     
+Modules in train mode: 28                                                       
+Modules in eval mode: 0                                                         
+Total FLOPs: 0                                                                  
+SLURM auto-requeueing enabled. Setting signal handlers.
+Metric val_f1 improved. New best score: 0.655
+Metric val_f1 improved by 0.011 >= min_delta = 0.0. New best score: 0.666
+Metric val_f1 improved by 0.010 >= min_delta = 0.0. New best score: 0.676
+Metric val_f1 improved by 0.010 >= min_delta = 0.0. New best score: 0.686
+Metric val_f1 improved by 0.016 >= min_delta = 0.0. New best score: 0.701
+Metric val_f1 improved by 0.012 >= min_delta = 0.0. New best score: 0.713
+Metric val_f1 improved by 0.019 >= min_delta = 0.0. New best score: 0.732
+Metric val_f1 improved by 0.014 >= min_delta = 0.0. New best score: 0.745
+Metric val_f1 improved by 0.012 >= min_delta = 0.0. New best score: 0.758
+Metric val_f1 improved by 0.014 >= min_delta = 0.0. New best score: 0.772
+Metric val_f1 improved by 0.010 >= min_delta = 0.0. New best score: 0.783
+Metric val_f1 improved by 0.011 >= min_delta = 0.0. New best score: 0.794
+Metric val_f1 improved by 0.009 >= min_delta = 0.0. New best score: 0.803
+Metric val_f1 improved by 0.009 >= min_delta = 0.0. New best score: 0.812
+Metric val_f1 improved by 0.005 >= min_delta = 0.0. New best score: 0.817
+Metric val_f1 improved by 0.002 >= min_delta = 0.0. New best score: 0.819
+Metric val_f1 improved by 0.004 >= min_delta = 0.0. New best score: 0.823
+Metric val_f1 improved by 0.004 >= min_delta = 0.0. New best score: 0.828
+Metric val_f1 improved by 0.001 >= min_delta = 0.0. New best score: 0.829
+Metric val_f1 improved by 0.003 >= min_delta = 0.0. New best score: 0.832
+Metric val_f1 improved by 0.004 >= min_delta = 0.0. New best score: 0.836
+Metric val_f1 improved by 0.003 >= min_delta = 0.0. New best score: 0.839
+Metric val_f1 improved by 0.004 >= min_delta = 0.0. New best score: 0.843
+Metric val_f1 improved by 0.001 >= min_delta = 0.0. New best score: 0.843
+Metric val_f1 improved by 0.004 >= min_delta = 0.0. New best score: 0.847
+Metric val_f1 improved by 0.001 >= min_delta = 0.0. New best score: 0.848
+Metric val_f1 improved by 0.001 >= min_delta = 0.0. New best score: 0.850
+Metric val_f1 improved by 0.001 >= min_delta = 0.0. New best score: 0.850
+Metric val_f1 improved by 0.001 >= min_delta = 0.0. New best score: 0.851
+Metric val_f1 improved by 0.001 >= min_delta = 0.0. New best score: 0.853
+Metric val_f1 improved by 0.003 >= min_delta = 0.0. New best score: 0.856
+Metric val_f1 improved by 0.000 >= min_delta = 0.0. New best score: 0.856
+Metric val_f1 improved by 0.002 >= min_delta = 0.0. New best score: 0.857
+Metric val_f1 improved by 0.002 >= min_delta = 0.0. New best score: 0.859
+Metric val_f1 improved by 0.000 >= min_delta = 0.0. New best score: 0.860
+Metric val_f1 improved by 0.001 >= min_delta = 0.0. New best score: 0.861
+Metric val_f1 improved by 0.001 >= min_delta = 0.0. New best score: 0.861
+Metric val_f1 improved by 0.000 >= min_delta = 0.0. New best score: 0.862
+Metric val_f1 improved by 0.001 >= min_delta = 0.0. New best score: 0.862
+Metric val_f1 improved by 0.002 >= min_delta = 0.0. New best score: 0.865
+Metric val_f1 improved by 0.001 >= min_delta = 0.0. New best score: 0.866
+Metric val_f1 improved by 0.001 >= min_delta = 0.0. New best score: 0.867
+Metric val_f1 improved by 0.000 >= min_delta = 0.0. New best score: 0.867
+`Trainer.fit` stopped: `max_epochs=50` reached.
+Epoch 49/49 ━━━━━━━━━━━━━━━━ 190/190 0:00:20 •        9.58it/s v_num: 0.000     
+                                     0:00:00                   train_loss: 0.301
+                                                               val_loss: 0.347  
+                                                               val_accuracy:    
+                                                               0.863 val_recall:
+                                                               0.899            
+                                                               val_precision:   
+                                                               0.838 val_f1:    
+                                                               0.867            
+[rank: 0] Seed set to 42
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/trainer/configuration_validator.py:70: You defined a `validation_step` but have no `val_dataloader`. Skipping val loop.
+/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/callbacks/model_checkpoint.py:881: Checkpoint directory /home/nstaehel/IPEO_hurricane_assesment/checkpoints exists and is not empty.
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+`weights_only` was not set, defaulting to `False`.
+
+ Starting Experiment: Model=cnn_from_paper, Optimizer=sgd, Max Epochs=50, Augment Train=True 
+
+Finding best initial lr:   0%|          | 0/100 [00:00<?, ?it/s]/pytorch/aten/src/ATen/native/cuda/Loss.cu:245: nll_loss_forward_reduce_cuda_kernel_2d: block: [0,0,0], thread: [0,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/ATen/native/cuda/Loss.cu:245: nll_loss_forward_reduce_cuda_kernel_2d: block: [0,0,0], thread: [2,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/ATen/native/cuda/Loss.cu:245: nll_loss_forward_reduce_cuda_kernel_2d: block: [0,0,0], thread: [3,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/ATen/native/cuda/Loss.cu:245: nll_loss_forward_reduce_cuda_kernel_2d: block: [0,0,0], thread: [4,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/ATen/native/cuda/Loss.cu:245: nll_loss_forward_reduce_cuda_kernel_2d: block: [0,0,0], thread: [6,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/ATen/native/cuda/Loss.cu:245: nll_loss_forward_reduce_cuda_kernel_2d: block: [0,0,0], thread: [7,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/ATen/native/cuda/Loss.cu:245: nll_loss_forward_reduce_cuda_kernel_2d: block: [0,0,0], thread: [8,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/ATen/native/cuda/Loss.cu:245: nll_loss_forward_reduce_cuda_kernel_2d: block: [0,0,0], thread: [9,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/ATen/native/cuda/Loss.cu:245: nll_loss_forward_reduce_cuda_kernel_2d: block: [0,0,0], thread: [11,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/ATen/native/cuda/Loss.cu:245: nll_loss_forward_reduce_cuda_kernel_2d: block: [0,0,0], thread: [12,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/ATen/native/cuda/Loss.cu:245: nll_loss_forward_reduce_cuda_kernel_2d: block: [0,0,0], thread: [13,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/ATen/native/cuda/Loss.cu:245: nll_loss_forward_reduce_cuda_kernel_2d: block: [0,0,0], thread: [14,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/ATen/native/cuda/Loss.cu:245: nll_loss_forward_reduce_cuda_kernel_2d: block: [0,0,0], thread: [15,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/ATen/native/cuda/Loss.cu:245: nll_loss_forward_reduce_cuda_kernel_2d: block: [0,0,0], thread: [16,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/ATen/native/cuda/Loss.cu:245: nll_loss_forward_reduce_cuda_kernel_2d: block: [0,0,0], thread: [17,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/ATen/native/cuda/Loss.cu:245: nll_loss_forward_reduce_cuda_kernel_2d: block: [0,0,0], thread: [19,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/ATen/native/cuda/Loss.cu:245: nll_loss_forward_reduce_cuda_kernel_2d: block: [0,0,0], thread: [20,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/ATen/native/cuda/Loss.cu:245: nll_loss_forward_reduce_cuda_kernel_2d: block: [0,0,0], thread: [22,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/ATen/native/cuda/Loss.cu:245: nll_loss_forward_reduce_cuda_kernel_2d: block: [0,0,0], thread: [23,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/ATen/native/cuda/Loss.cu:245: nll_loss_forward_reduce_cuda_kernel_2d: block: [0,0,0], thread: [24,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/ATen/native/cuda/Loss.cu:245: nll_loss_forward_reduce_cuda_kernel_2d: block: [0,0,0], thread: [27,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/ATen/native/cuda/Loss.cu:245: nll_loss_forward_reduce_cuda_kernel_2d: block: [0,0,0], thread: [28,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/ATen/native/cuda/Loss.cu:245: nll_loss_forward_reduce_cuda_kernel_2d: block: [0,0,0], thread: [30,0,0] Assertion `t >= 0 && t < n_classes` failed.
+/pytorch/aten/src/ATen/native/cuda/Loss.cu:245: nll_loss_forward_reduce_cuda_kernel_2d: block: [0,0,0], thread: [31,0,0] Assertion `t >= 0 && t < n_classes` failed.
+Restoring states from the checkpoint path at /home/nstaehel/IPEO_hurricane_assesment/.lr_find_0d26d142-1075-41b6-aff8-ab10d24ffa13.ckpt
+Traceback (most recent call last):
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/tuner/lr_finder.py", line 285, in _lr_find
+    raise ex
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/tuner/lr_finder.py", line 266, in _lr_find
+    _try_loop_run(trainer, params)
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/tuner/lr_finder.py", line 521, in _try_loop_run
+    loop.run()
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/loops/fit_loop.py", line 217, in run
+    self.advance()
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/loops/fit_loop.py", line 465, in advance
+    self.epoch_loop.run(self._data_fetcher)
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/loops/training_epoch_loop.py", line 153, in run
+    self.advance(data_fetcher)
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/loops/training_epoch_loop.py", line 352, in advance
+    batch_output = self.automatic_optimization.run(trainer.optimizers[0], batch_idx, kwargs)
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 192, in run
+    self._optimizer_step(batch_idx, closure)
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 270, in _optimizer_step
+    call._call_lightning_module_hook(
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/trainer/call.py", line 177, in _call_lightning_module_hook
+    output = fn(*args, **kwargs)
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/core/module.py", line 1368, in optimizer_step
+    optimizer.step(closure=optimizer_closure)
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/core/optimizer.py", line 154, in step
+    step_output = self._strategy.optimizer_step(self._optimizer, closure, **kwargs)
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/strategies/strategy.py", line 239, in optimizer_step
+    return self.precision_plugin.optimizer_step(optimizer, model=model, closure=closure, **kwargs)
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/plugins/precision/precision.py", line 123, in optimizer_step
+    return optimizer.step(closure=closure, **kwargs)
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/torch/optim/lr_scheduler.py", line 133, in wrapper
+    return func.__get__(opt, opt.__class__)(*args, **kwargs)
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/torch/optim/optimizer.py", line 516, in wrapper
+    out = func(*args, **kwargs)
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/torch/optim/optimizer.py", line 81, in _use_grad
+    ret = func(*args, **kwargs)
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/torch/optim/sgd.py", line 116, in step
+    loss = closure()
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/plugins/precision/precision.py", line 109, in _wrap_closure
+    closure_result = closure()
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 146, in __call__
+    self._result = self.closure(*args, **kwargs)
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 131, in closure
+    step_output = self._step_fn()
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/loops/optimization/automatic.py", line 319, in _training_step
+    training_step_output = call._call_strategy_hook(trainer, "training_step", *kwargs.values())
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/trainer/call.py", line 329, in _call_strategy_hook
+    output = fn(*args, **kwargs)
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/strategies/strategy.py", line 391, in training_step
+    return self.lightning_module.training_step(*args, **kwargs)
+  File "/home/nstaehel/IPEO_hurricane_assesment/src/models/lightningmodel.py", line 55, in training_step
+    self.log("train_loss", loss, prog_bar=True)
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/core/module.py", line 531, in log
+    results.log(
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/torch/_dynamo/eval_frame.py", line 929, in _fn
+    return fn(*args, **kwargs)
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py", line 412, in log
+    self[key].to(value.device)
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/trainer/connectors/logger_connector/result.py", line 308, in to
+    self.__dict__.update(apply_to_collection(d, (Tensor, Metric), move_data_to_device, *args, **kwargs))
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/lightning_utilities/core/apply_func.py", line 74, in apply_to_collection
+    return _apply_to_collection_slow(
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/lightning_utilities/core/apply_func.py", line 150, in _apply_to_collection_slow
+    v = _apply_to_collection_slow(
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/lightning_utilities/core/apply_func.py", line 150, in _apply_to_collection_slow
+    v = _apply_to_collection_slow(
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/lightning_utilities/core/apply_func.py", line 98, in _apply_to_collection_slow
+    return function(data, *args, **kwargs)
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/lightning_fabric/utilities/apply_func.py", line 110, in move_data_to_device
+    return apply_to_collection(batch, dtype=_TransferableDataType, function=batch_to)
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/lightning_utilities/core/apply_func.py", line 66, in apply_to_collection
+    return function(data, *args, **kwargs)
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/lightning_fabric/utilities/apply_func.py", line 104, in batch_to
+    data_output = data.to(device, **kwargs)
+torch.AcceleratorError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/trainer/call.py", line 49, in _call_and_handle_interrupt
+    return trainer_fn(*args, **kwargs)
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 630, in _fit_impl
+    self._run(model, ckpt_path=ckpt_path, weights_only=weights_only)
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 1057, in _run
+    call._call_callback_hooks(self, "on_fit_start")
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/trainer/call.py", line 228, in _call_callback_hooks
+    fn(trainer, trainer.lightning_module, *args, **kwargs)
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/callbacks/lr_finder.py", line 130, in on_fit_start
+    self.lr_find(trainer, pl_module)
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/callbacks/lr_finder.py", line 113, in lr_find
+    self.optimal_lr = _lr_find(
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/tuner/lr_finder.py", line 288, in _lr_find
+    trainer._checkpoint_connector.restore(ckpt_path)
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/trainer/connectors/checkpoint_connector.py", line 251, in restore
+    self.restore_model()
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/trainer/connectors/checkpoint_connector.py", line 286, in restore_model
+    self.trainer.strategy.load_model_state_dict(
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/strategies/strategy.py", line 372, in load_model_state_dict
+    self.lightning_module.load_state_dict(checkpoint["state_dict"], strict=strict)
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 2624, in load_state_dict
+    raise RuntimeError(
+RuntimeError: Error(s) in loading state_dict for LightningClassifierModelWrapper:
+	While copying the parameter named "model.conv1.weight", whose dimensions in the model are torch.Size([32, 3, 3, 3]) and whose dimensions in the checkpoint are torch.Size([32, 3, 3, 3]), an exception occurred : ('CUDA error: device-side assert triggered\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n',).
+	While copying the parameter named "model.conv1.bias", whose dimensions in the model are torch.Size([32]) and whose dimensions in the checkpoint are torch.Size([32]), an exception occurred : ('CUDA error: device-side assert triggered\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n',).
+	While copying the parameter named "model.conv2.weight", whose dimensions in the model are torch.Size([64, 32, 3, 3]) and whose dimensions in the checkpoint are torch.Size([64, 32, 3, 3]), an exception occurred : ('CUDA error: device-side assert triggered\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n',).
+	While copying the parameter named "model.conv2.bias", whose dimensions in the model are torch.Size([64]) and whose dimensions in the checkpoint are torch.Size([64]), an exception occurred : ('CUDA error: device-side assert triggered\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n',).
+	While copying the parameter named "model.conv3.weight", whose dimensions in the model are torch.Size([128, 64, 3, 3]) and whose dimensions in the checkpoint are torch.Size([128, 64, 3, 3]), an exception occurred : ('CUDA error: device-side assert triggered\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n',).
+	While copying the parameter named "model.conv3.bias", whose dimensions in the model are torch.Size([128]) and whose dimensions in the checkpoint are torch.Size([128]), an exception occurred : ('CUDA error: device-side assert triggered\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n',).
+	While copying the parameter named "model.conv4.weight", whose dimensions in the model are torch.Size([128, 128, 3, 3]) and whose dimensions in the checkpoint are torch.Size([128, 128, 3, 3]), an exception occurred : ('CUDA error: device-side assert triggered\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n',).
+	While copying the parameter named "model.conv4.bias", whose dimensions in the model are torch.Size([128]) and whose dimensions in the checkpoint are torch.Size([128]), an exception occurred : ('CUDA error: device-side assert triggered\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n',).
+	While copying the parameter named "model.fc1.weight", whose dimensions in the model are torch.Size([512, 10368]) and whose dimensions in the checkpoint are torch.Size([512, 10368]), an exception occurred : ('CUDA error: device-side assert triggered\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n',).
+	While copying the parameter named "model.fc1.bias", whose dimensions in the model are torch.Size([512]) and whose dimensions in the checkpoint are torch.Size([512]), an exception occurred : ('CUDA error: device-side assert triggered\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n',).
+	While copying the parameter named "model.fc2.weight", whose dimensions in the model are torch.Size([1, 512]) and whose dimensions in the checkpoint are torch.Size([1, 512]), an exception occurred : ('CUDA error: device-side assert triggered\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n',).
+	While copying the parameter named "model.fc2.bias", whose dimensions in the model are torch.Size([1]) and whose dimensions in the checkpoint are torch.Size([1]), an exception occurred : ('CUDA error: device-side assert triggered\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n',).
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nstaehel/IPEO_hurricane_assesment/training.py", line 26, in <module>
+    trainer, lightning_model = modelling_choice(
+  File "/home/nstaehel/IPEO_hurricane_assesment/src/models/lightningmodel.py", line 279, in modelling_choice
+    lr_finder = tuner.lr_find(lightning_model, train_dataloaders=train_loader, attr_name="lr")
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/tuner/tuning.py", line 191, in lr_find
+    self._trainer.fit(model, train_dataloaders, val_dataloaders, datamodule)
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 584, in fit
+    call._call_and_handle_interrupt(
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/trainer/call.py", line 70, in _call_and_handle_interrupt
+    trainer._teardown()
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/trainer/trainer.py", line 1102, in _teardown
+    self.strategy.teardown()
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/pytorch_lightning/strategies/strategy.py", line 536, in teardown
+    self.lightning_module.cpu()
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/lightning_fabric/utilities/device_dtype_mixin.py", line 86, in cpu
+    return super().cpu()
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1150, in cpu
+    return self._apply(lambda t: t.cpu())
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 928, in _apply
+    module._apply(fn)
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 928, in _apply
+    module._apply(fn)
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 955, in _apply
+    param_applied = fn(param)
+  File "/home/nstaehel/.venv/lib64/python3.9/site-packages/torch/nn/modules/module.py", line 1150, in <lambda>
+    return self._apply(lambda t: t.cpu())
+torch.AcceleratorError: CUDA error: device-side assert triggered
+CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.
+For debugging consider passing CUDA_LAUNCH_BLOCKING=1
+Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.
+
+Finding best initial lr:   0%|          | 0/100 [00:02<?, ?it/s]

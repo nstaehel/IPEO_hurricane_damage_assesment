@@ -1,0 +1,163 @@
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+SLURM auto-requeueing enabled. Setting signal handlers.
+Loaded 19000 images for train split
+Loaded 2000 images for validation split
+Loaded 2000 images for test split
+
+Evaluating: cnn_from_paper-sgd-0.01-epoch=24-val_accuracy=0.93-val_f1=0.94-augment=True.ckpt
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃        Test metric        ┃       DataLoader 0        ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│       test_accuracy       │    0.9240000247955322     │
+│          test_f1          │    0.9278937578201294     │
+│         test_loss         │    0.1726609319448471     │
+│      test_precision       │    0.8826714754104614     │
+│        test_recall        │    0.9779999852180481     │
+└───────────────────────────┴───────────────────────────┘
+Testing ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 20/20 0:00:01 • 0:00:00 29.71it/s 
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+SLURM auto-requeueing enabled. Setting signal handlers.
+
+Evaluating: alexnet-adam-0.01-epoch=49-val_accuracy=0.86-val_f1=0.87.ckpt
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃        Test metric        ┃       DataLoader 0        ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│       test_accuracy       │    0.8634999990463257     │
+│          test_f1          │     0.868686854839325     │
+│         test_loss         │    0.35424891114234924    │
+│      test_precision       │    0.8368859887123108     │
+│        test_recall        │     0.902999997138977     │
+└───────────────────────────┴───────────────────────────┘
+Testing ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 20/20 0:00:00 • 0:00:00 23.68it/s 
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+SLURM auto-requeueing enabled. Setting signal handlers.
+
+Evaluating: cnn_from_paper-adam-0.01-epoch=9-val_accuracy=0.91-val_f1=0.92-augment=False.ckpt
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃        Test metric        ┃       DataLoader 0        ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│       test_accuracy       │    0.9014999866485596     │
+│          test_f1          │    0.9100045561790466     │
+│         test_loss         │    0.23725451529026031    │
+│      test_precision       │    0.8376787304878235     │
+│        test_recall        │    0.9959999918937683     │
+└───────────────────────────┴───────────────────────────┘
+Testing ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 20/20 0:00:00 • 0:00:00 22.89it/s 
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+SLURM auto-requeueing enabled. Setting signal handlers.
+
+Evaluating: cnn_from_paper-adam-0.01-epoch=19-val_accuracy=0.94-val_f1=0.94-augment=True.ckpt
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃        Test metric        ┃       DataLoader 0        ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│       test_accuracy       │    0.9185000061988831     │
+│          test_f1          │    0.9207583665847778     │
+│         test_loss         │    0.18368270993232727    │
+│      test_precision       │    0.8959318995475769     │
+│        test_recall        │    0.9470000267028809     │
+└───────────────────────────┴───────────────────────────┘
+Testing ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 20/20 0:00:00 • 0:00:00 23.16it/s 
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+SLURM auto-requeueing enabled. Setting signal handlers.
+
+Evaluating: cnn_from_paper-sgd-0.01-epoch=4-val_accuracy=0.93-val_f1=0.93-augment=False.ckpt
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃        Test metric        ┃       DataLoader 0        ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│       test_accuracy       │    0.9110000133514404     │
+│          test_f1          │    0.9157994389533997     │
+│         test_loss         │    0.20118241012096405    │
+│      test_precision       │    0.8689407706260681     │
+│        test_recall        │    0.9679999947547913     │
+└───────────────────────────┴───────────────────────────┘
+Testing ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 20/20 0:00:00 • 0:00:00 22.97it/s 
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+SLURM auto-requeueing enabled. Setting signal handlers.
+
+Evaluating: resnet50-adam-0.01-epoch=4-val_accuracy=0.96-val_f1=0.96.ckpt
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃        Test metric        ┃       DataLoader 0        ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│       test_accuracy       │    0.9509999752044678     │
+│          test_f1          │    0.9530201554298401     │
+│         test_loss         │    0.13849203288555145    │
+│      test_precision       │    0.9152854681015015     │
+│        test_recall        │    0.9940000176429749     │
+└───────────────────────────┴───────────────────────────┘
+Testing ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 20/20 0:00:01 • 0:00:00 19.19it/s 
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+SLURM auto-requeueing enabled. Setting signal handlers.
+
+Evaluating: resnet18-sgd-0.01-epoch=4-val_accuracy=0.98-val_f1=0.98.ckpt
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃        Test metric        ┃       DataLoader 0        ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│       test_accuracy       │    0.9810000061988831     │
+│          test_f1          │    0.9811694622039795     │
+│         test_loss         │    0.06338072568178177    │
+│      test_precision       │    0.9724950790405273     │
+│        test_recall        │    0.9900000095367432     │
+└───────────────────────────┴───────────────────────────┘
+Testing ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 20/20 0:00:00 • 0:00:00 22.83it/s 
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+SLURM auto-requeueing enabled. Setting signal handlers.
+
+Evaluating: resnet50-sgd-0.01-epoch=9-val_accuracy=0.98-val_f1=0.98.ckpt
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃        Test metric        ┃       DataLoader 0        ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│       test_accuracy       │    0.9779999852180481     │
+│          test_f1          │    0.9783677458763123     │
+│         test_loss         │    0.06273958086967468    │
+│      test_precision       │    0.9622824192047119     │
+│        test_recall        │    0.9950000047683716     │
+└───────────────────────────┴───────────────────────────┘
+Testing ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 20/20 0:00:01 • 0:00:00 19.14it/s 
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+SLURM auto-requeueing enabled. Setting signal handlers.
+
+Evaluating: alexnet-sgd-0.01-epoch=49-val_accuracy=0.76-val_f1=0.77.ckpt
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃        Test metric        ┃       DataLoader 0        ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│       test_accuracy       │    0.7490000128746033     │
+│          test_f1          │    0.7649812698364258     │
+│         test_loss         │    0.5549283027648926     │
+│      test_precision       │    0.7191901206970215     │
+│        test_recall        │    0.8169999718666077     │
+└───────────────────────────┴───────────────────────────┘
+Testing ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 20/20 0:00:00 • 0:00:00 23.69it/s 
+GPU available: True (cuda), used: True
+TPU available: False, using: 0 TPU cores
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+SLURM auto-requeueing enabled. Setting signal handlers.
+
+Evaluating: resnet18-adam-0.01-epoch=4-val_accuracy=0.98-val_f1=0.98.ckpt
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃        Test metric        ┃       DataLoader 0        ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│       test_accuracy       │    0.9810000061988831     │
+│          test_f1          │    0.9812438488006592     │
+│         test_loss         │    0.06260161101818085    │
+│      test_precision       │    0.9688109159469604     │
+│        test_recall        │    0.9940000176429749     │
+└───────────────────────────┴───────────────────────────┘
+Testing ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 20/20 0:00:00 • 0:00:00 22.36it/s 
